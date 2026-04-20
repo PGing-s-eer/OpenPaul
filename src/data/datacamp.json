@@ -1,0 +1,12 @@
+{
+  "totalXp": 171546,
+  "coursesCompleted": 36,
+  "skillAssessmentsPassed": 8,
+  "careerTracksCompleted": 1,
+  "domains": [
+    { "name": "Python", "progress": 88 },
+    { "name": "SQL", "progress": 72 },
+    { "name": "Machine Learning", "progress": 65 },
+    { "name": "Statistics", "progress": 70 }
+  ]
+}

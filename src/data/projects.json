@@ -1,0 +1,28 @@
+[
+  {
+    "id": "vision-patrimoine",
+    "title": "VisionPatrimoine",
+    "shortDescription": "Application de visualisation du patrimoine financier et d’aide à la décision.",
+    "fullDescription": "Projet de visualisation interactive des données patrimoniales : cartes, agrégations et restitution pour un usage métier. Objectif : rendre lisible un volume de données hétérogènes et faciliter la lecture des enjeux territoriaux.",
+    "tags": ["Python", "Streamlit", "Data Viz", "Real Estate"],
+    "methodology": ["EDA", "Visualisation"],
+    "githubUrl": null,
+    "demoUrl": null,
+    "videoUrl": null,
+    "thumbnail": null,
+    "featured": true
+  },
+  {
+    "id": "stage-engie",
+    "title": "Stage Data — Engie",
+    "shortDescription": "Six mois en équipe data : analyses, industrialisation de restitutions et collaboration métier.",
+    "fullDescription": "Stage de six mois au sein d’une équipe data : construction de jeux de données, analyses récurrentes, participation aux échanges avec les métiers et documentation des livrables. Mise en pratique de Python, SQL et des bonnes pratiques de versioning et de clarté des résultats.",
+    "tags": ["Python", "SQL", "Energy", "Reporting"],
+    "methodology": ["Feature engineering", "Reporting", "Collaboration métier"],
+    "githubUrl": null,
+    "demoUrl": null,
+    "videoUrl": null,
+    "thumbnail": null,
+    "featured": false
+  }
+]

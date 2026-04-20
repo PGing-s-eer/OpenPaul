@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dc-data-scientist",
+    "name": "Data Scientist Professional",
+    "issuer": "DataCamp",
+    "dateObtained": "2024-11",
+    "credentialUrl": "https://www.datacamp.com/",
+    "badgeUrl": null
+  },
+  {
+    "id": "dc-python-programmer",
+    "name": "Python Programmer",
+    "issuer": "DataCamp",
+    "dateObtained": "2024-08",
+    "credentialUrl": "https://www.datacamp.com/",
+    "badgeUrl": null
+  },
+  {
+    "id": "dc-sql-fundamentals",
+    "name": "SQL Fundamentals",
+    "issuer": "DataCamp",
+    "dateObtained": "2024-05",
+    "credentialUrl": "https://www.datacamp.com/",
+    "badgeUrl": null
+  }
+]

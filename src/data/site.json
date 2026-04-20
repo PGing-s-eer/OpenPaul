@@ -1,0 +1,29 @@
+{
+  "brand": "Paul",
+  "title": "Data Scientist — Junior, ambitious, always learning",
+  "subtitle": "Portfolio data science · Au-delà du CV.",
+  "heroCta": "Découvrir",
+  "ctaTargetId": "kpis",
+  "nav": [
+    { "id": "hero", "label": "Accueil" },
+    { "id": "kpis", "label": "Indicateurs" },
+    { "id": "projects", "label": "Projets" },
+    { "id": "certifications", "label": "Certifications" },
+    { "id": "datacamp", "label": "DataCamp" },
+    { "id": "library", "label": "Bibliothèque" }
+  ],
+  "footer": {
+    "github": "https://github.com/PGing-s-eer",
+    "linkedin": "https://www.linkedin.com/in/paul-gaillard-datascience/",
+    "datacamp": "https://www.datacamp.com/portfolio/paulgaillard",
+    "email": "contact@example.com"
+  },
+  "lastUpdated": "2026-04-18",
+  "seo": {
+    "documentTitle": "Paul — Data Scientist | Portfolio",
+    "metaDescription": "Portfolio data science : projets, certifications, progression DataCamp et bibliothèque de connaissances — junior, ambitieux, apprentissage continu.",
+    "siteUrl": "",
+    "ogImage": "/og-image.svg",
+    "twitterSite": ""
+  }
+}

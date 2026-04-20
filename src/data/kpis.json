@@ -1,0 +1,37 @@
+[
+  {
+    "id": "projects",
+    "label": "Projets data",
+    "source": "projects",
+    "suffix": "",
+    "icon": "layers"
+  },
+  {
+    "id": "xp",
+    "label": "XP DataCamp",
+    "source": "datacamp.totalXp",
+    "suffix": " XP",
+    "icon": "bolt"
+  },
+  {
+    "id": "certifications",
+    "label": "Certifications",
+    "source": "certifications",
+    "suffix": "",
+    "icon": "award"
+  },
+  {
+    "id": "experience",
+    "label": "Mois d’expérience pro",
+    "value": 10,
+    "suffix": " mois",
+    "icon": "calendar"
+  },
+  {
+    "id": "concepts",
+    "label": "Concepts catalogués",
+    "source": "keywords",
+    "suffix": "",
+    "icon": "book"
+  }
+]

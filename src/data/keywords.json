@@ -1,0 +1,182 @@
+[
+  {
+    "id": "tailscale",
+    "name": "Tailscale",
+    "category": "Tool",
+    "subcategory": "Réseau",
+    "dateAdded": "2026-04-12",
+    "note": "VPN mesh peer-to-peer : chaque machine se connecte aux autres sans serveur central unique.",
+    "analogy": "Comme donner une adresse privée à chaque appareil et les faire se parler directement."
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "category": "Tool",
+    "subcategory": "Conteneurs",
+    "dateAdded": "2026-03-28",
+    "note": "Empaqueter une app et ses dépendances dans une image reproductible.",
+    "analogy": "Une boîte de déménagement étiquetée : on ouvre n’importe où, le contenu est identique."
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI",
+    "category": "Framework",
+    "subcategory": "API",
+    "dateAdded": "2026-03-15",
+    "note": "Framework Python pour APIs rapides, typage et docs OpenAPI auto.",
+    "analogy": "Un guichet express : tu déclares ce que tu vends, la file d’attente (la doc) se génère toute seule."
+  },
+  {
+    "id": "pytest",
+    "name": "pytest",
+    "category": "Tool",
+    "subcategory": "Tests",
+    "dateAdded": "2026-03-02",
+    "note": "Lancer des tests unitaires et d’intégration avec des fixtures réutilisables.",
+    "analogy": "Une checklist avant d’ouvrir le magasin : si un item casse, tu sais lequel."
+  },
+  {
+    "id": "cross-validation",
+    "name": "Cross-validation",
+    "category": "Methodology",
+    "subcategory": "ML",
+    "dateAdded": "2026-02-20",
+    "note": "Découper les données en plis pour estimer la performance sans biais d’optimisme.",
+    "analogy": "Réviser avec plusieurs sujets d’examen au lieu de mémoriser les réponses d’un seul."
+  },
+  {
+    "id": "matplotlib",
+    "name": "matplotlib",
+    "category": "Library",
+    "subcategory": "Visualisation",
+    "dateAdded": "2026-02-08",
+    "note": "Tracer des graphiques en Python, couche bas niveau très contrôlable.",
+    "analogy": "Les crayons de couleur du data scientist : un peu verbeux, mais tout est possible."
+  },
+  {
+    "id": "numpy",
+    "name": "NumPy",
+    "category": "Library",
+    "subcategory": "Calcul",
+    "dateAdded": "2026-01-25",
+    "note": "Tableaux n-dimensionnels et opérations vectorisées en C sous le capot.",
+    "analogy": "Le moteur électrique sous le capot : tu conduis en Python, la puissance est ailleurs."
+  },
+  {
+    "id": "jupyter",
+    "name": "Jupyter",
+    "category": "Tool",
+    "subcategory": "Notebooks",
+    "dateAdded": "2026-01-10",
+    "note": "Notebooks interactifs pour explorer des données et documenter des essais.",
+    "analogy": "Un carnet de laboratoire où tu mélanges texte, code et graphiques."
+  },
+  {
+    "id": "regex",
+    "name": "Expressions régulières",
+    "category": "Concept",
+    "subcategory": "Texte",
+    "dateAdded": "2025-12-18",
+    "note": "Motifs pour chercher, extraire ou valider du texte structuré ou semi-structuré.",
+    "analogy": "Un tamis avec des trous de tailles précises : seuls les grains qui matchent passent."
+  },
+  {
+    "id": "rest",
+    "name": "API REST",
+    "category": "Concept",
+    "subcategory": "Web",
+    "dateAdded": "2025-12-01",
+    "note": "Style d’API HTTP centré sur des ressources, verbes (GET, POST…) et codes de statut.",
+    "analogy": "Un menu de restaurant : des plats (ressources) et des actions standard pour commander."
+  },
+  {
+    "id": "streamlit",
+    "name": "Streamlit",
+    "category": "Framework",
+    "subcategory": "Apps",
+    "dateAdded": "2025-11-15",
+    "note": "Prototyper des apps data en Python rapidement.",
+    "analogy": "Une vitrine pour montrer un modèle sans écrire du front lourd."
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "category": "Tool",
+    "subcategory": "Versioning",
+    "dateAdded": "2025-11-01",
+    "note": "Historique et collaboration sur le code.",
+    "analogy": "Une machine à voyager dans le temps pour les fichiers."
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "category": "Language",
+    "subcategory": "Bases relationnelles",
+    "dateAdded": "2025-10-20",
+    "note": "Interrogation et agrégation de données relationnelles.",
+    "analogy": "Demander poliment à une base ce qu’elle sait."
+  },
+  {
+    "id": "scikit-learn",
+    "name": "scikit-learn",
+    "category": "Library",
+    "subcategory": "ML",
+    "dateAdded": "2025-09-28",
+    "note": "Modèles ML classiques et pipelines.",
+    "analogy": "L’établi où l’on assemble des modèles sans usine entière."
+  },
+  {
+    "id": "pandas",
+    "name": "pandas",
+    "category": "Library",
+    "subcategory": "Manipulation",
+    "dateAdded": "2025-09-05",
+    "note": "Tables et séries pour manipuler des données tabulaires.",
+    "analogy": "Excel programmable, en mieux."
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "Language",
+    "subcategory": "Général",
+    "dateAdded": "2025-08-20",
+    "note": "Langage de référence pour la data et le ML.",
+    "analogy": "La boîte à outils principale sur un chantier data."
+  },
+  {
+    "id": "eda",
+    "name": "EDA",
+    "category": "Methodology",
+    "subcategory": "Exploration",
+    "dateAdded": "2025-08-01",
+    "note": "Exploration visuelle et statistique des données avant modélisation.",
+    "analogy": "Fouiller un grenier avant de décider quoi vendre ou réparer."
+  },
+  {
+    "id": "hypothesis-testing",
+    "name": "Tests d’hypothèses",
+    "category": "Methodology",
+    "subcategory": "Statistiques",
+    "dateAdded": "2025-07-12",
+    "note": "Comparer des groupes ou mesurer la significativité d’un effet observé.",
+    "analogy": "Un procès : preuves pour ou contre l’hypothèse « rien ne se passe »."
+  },
+  {
+    "id": "p-value",
+    "name": "p-value",
+    "category": "Concept",
+    "subcategory": "Statistiques",
+    "dateAdded": "2025-06-20",
+    "note": "Probabilité d’observer un résultat au moins aussi extrême si l’hypothèse nulle est vraie.",
+    "analogy": "La probabilité que le hasard seul joue le même tour de magie."
+  },
+  {
+    "id": "csv",
+    "name": "CSV",
+    "category": "Concept",
+    "subcategory": "Données",
+    "dateAdded": "2025-06-01",
+    "note": "Format texte tabulaire délimité par des virgules (ou autre séparateur).",
+    "analogy": "Une feuille de calcul déshabillée : plus léger, moins de fioritures."
+  }
+]
