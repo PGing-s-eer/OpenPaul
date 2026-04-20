@@ -1,6 +1,6 @@
 # Paul's Portfolio — Recruiter-Grade Data Science Showcase
 
-> A public-facing, visually striking portfolio site designed to go far beyond a traditional CV.  
+> A public-facing portfolio designed to go beyond a traditional CV.  
 > Built for recruiters, hiring managers, and the data science community.  
 > *"Junior in experience. Senior in mindset."*
 
@@ -9,7 +9,7 @@
 ## 🎯 Project Purpose
 
 This site is the public extension of Paul's CV. It is not a standard portfolio.  
-It is a **living knowledge base**, a **project showcase**, and a **signal of technical ambition** — all in one.
+It is a **living knowledge base**, a **project showcase**, and a **signal of technical ambition**, all in one.
 
 Target audience:
 - Recruiters at tech/data companies
@@ -17,9 +17,27 @@ Target audience:
 - Anyone who wants to understand what Paul knows, how he thinks, and what he's building
 
 Core message to convey:
-- Paul comes from a business school background but has **real technical depth**
-- He is a **self-driven learner** who documents and shares what he learns
-- He is **not the average junior candidate**
+- I come from a business school background but have real **auto-didact technical depth**
+- I'm a **self-driven learner** who documents and shares what i am learning
+- I target to **be above the average junior candidate**
+
+---
+
+## 🚀 Quickstart (run locally)
+
+Prerequisites: **Node.js** (LTS recommended) and **npm**.
+
+```bash
+npm install
+npm run dev
+```
+
+Build + preview (production-like):
+
+```bash
+npm run build
+npm run preview
+```
 
 ---
 
@@ -46,10 +64,7 @@ Large, clickable cards. Each card contains:
 - On click: modal or dedicated page with full project detail
 - Optional: GitHub link, demo link, thumbnail/visual
 
-Projects to include (to be completed by Paul):
-- [ ] VisionPatrimoine (video presentation embed)
-- [ ] Stage Engie — 6-month internship (podcast or summary)
-- [ ] [Other projects TBD]
+Projects are driven by `src/data/projects.json` (easy to update and versioned in Git).
 
 ### 4. Certifications — Card Grid
 One card per certification. Each card:
@@ -83,8 +98,8 @@ One card per certification. Each card:
 ```
 Tailscale
 Category: Tool / Networking
-Added: 2025-06-10
-Paul's note: "Un VPN mesh peer-to-peer. Au lieu d'un serveur central, chaque machine se connecte directement aux autres. C'est comme si tu donnais une adresse privée à chaque appareil dans le monde."
+Added: 2026-04-15
+Paul's note: "Un VPN mesh peer-to-peer. Au lieu d'un serveur central, chaque machine se connecte directement aux autres. C'est comme si on donnais une adresse privée à chaque appareil dans le monde."
 ```
 
 **Admin-only:** Paul can add/edit/delete keywords via a password-protected admin dashboard (same site, `/admin` route).
@@ -104,14 +119,15 @@ Paul's note: "Un VPN mesh peer-to-peer. Au lieu d'un serveur central, chaque mac
 | Framework | **React + Vite** | Fast, lightweight, no SSR overhead needed |
 | Styling | **Tailwind CSS** | Utility-first, rapid UI iteration |
 | Animations | **Framer Motion** | Production-grade React animations |
-| Word Cloud / Graph | **D3.js** or `react-wordcloud` | For the keyword background visual |
+| Word Cloud | **d3-cloud** (+ SVG) | Decorative keyword background generated from the library |
 | Routing | **React Router v6** | SPA routing (main site + /admin) |
 | Data storage | **JSON files** (local, versioned in Git) | Simple, no backend needed for MVP |
 | Admin auth | **Simple password hash in env var** | Lightweight, sufficient for personal site |
 | Hosting | **Vercel** | Free tier, automatic deploys from GitHub, perfect for Vite/React |
 | Domain | **To be purchased** (e.g. paulxxx.com via Namecheap or Porkbun) | ~10€/year |
 
-> **No database for MVP.** Everything under `/src/data/` is bundled at build time for the **public site**. **`/admin`** edits copies in `localStorage` (tabs per JSON + formulaire mots-clés). **Télécharger `openpaul-data.zip`** exports all six files; replace `src/data/*.json` in Git and push so Vercel redeploys.
+> **No database for MVP.** Everything under `src/data/` is bundled at build time for the **public site**.  
+> The `/admin` route is meant for personal use and stores edits in the browser (`localStorage`). To publish changes, update the JSON files in Git and redeploy.
 
 ---
 
@@ -175,117 +191,6 @@ portfolio/
 
 ---
 
-## 🗺️ Development Roadmap
-
-### Phase 0 — Setup (Day 1)
-- [ ] `npm create vite@latest portfolio -- --template react`
-- [ ] Install: Tailwind CSS, Framer Motion, React Router, D3
-- [ ] Configure Tailwind with custom theme (colors, fonts)
-- [ ] Set up folder structure as defined above
-- [ ] Create placeholder JSON data files
-- [ ] Push to GitHub repo (public)
-- [ ] Connect repo to Vercel (auto-deploy on push)
-
-### Phase 1 — Core Layout & Hero (Day 1–2)
-- [ ] Navbar (name left, links right, minimal)
-- [ ] Hero section: name, title, subtitle, scroll CTA
-- [ ] Animated word cloud background (D3 or `react-wordcloud`)
-- [ ] Smooth scroll between sections
-
-### Phase 2 — KPI Strip (Day 2)
-- [ ] 4–5 animated counters
-- [ ] Scroll-triggered count-up (Intersection Observer or Framer Motion)
-- [ ] Icons per KPI
-
-### Phase 3 — Projects Section (Day 2–3)
-- [ ] ProjectCard component
-- [ ] Grid layout (2–3 columns responsive)
-- [ ] Modal on click with full detail + tags
-- [ ] Populate `projects.json` with real data
-
-### Phase 4 — Certifications & DataCamp (Day 3)
-- [ ] CertCard component with badge image + credential link
-- [ ] DataCamp stats section (XP, courses, radar chart)
-- [ ] Populate JSON files with real data
-
-### Phase 5 — Knowledge Library (Day 3–5) ⭐
-- [ ] KeywordCard component
-- [ ] Search bar with live fuzzy filtering
-- [ ] Category filter chips (Library / Framework / Tool / Language / Methodology)
-- [ ] "Recently added" sorted feed at top
-- [ ] Word cloud / network graph background (D3)
-- [ ] Seed `keywords.json` with ~20 initial entries
-
-### Phase 6 — Admin Dashboard (Day 5–6)
-- [ ] `/admin` route (protected by password via env var)
-- [ ] Login screen
-- [ ] Dashboard: list all keywords, add new, edit, delete
-- [ ] Form: name, category, date, Paul's note / analogy
-- [ ] Writes to `keywords.json` (via local API or GitHub commit)
-
-### Phase 7 — Polish & Deploy (Day 6–7)
-- [ ] Responsive design audit (mobile first)
-- [ ] Page load animations (staggered reveals)
-- [ ] SEO meta tags (title, description, og:image)
-- [ ] Favicon + og:image
-- [ ] Performance audit (Lighthouse)
-- [ ] Purchase domain + configure on Vercel
-- [ ] Final review
-
----
-
-## 📄 Data Schemas
-
-### `projects.json`
-```json
-[
-  {
-    "id": "vision-patrimoine",
-    "title": "VisionPatrimoine",
-    "shortDescription": "Application de visualisation du patrimoine immobilier.",
-    "fullDescription": "...",
-    "tags": ["Python", "Streamlit", "Real Estate", "Data Viz"],
-    "methodology": ["EDA", "Clustering"],
-    "githubUrl": "https://github.com/...",
-    "demoUrl": null,
-    "videoUrl": "https://youtube.com/...",
-    "thumbnail": "/assets/projects/vision-patrimoine.png",
-    "featured": true
-  }
-]
-```
-
-### `keywords.json`
-```json
-[
-  {
-    "id": "tailscale",
-    "name": "Tailscale",
-    "category": "Tool",
-    "subcategory": "Networking",
-    "dateAdded": "2025-06-10",
-    "note": "Un VPN mesh peer-to-peer. Chaque machine se connecte directement aux autres, sans serveur central.",
-    "analogy": "C'est comme donner une adresse privée à chaque appareil dans le monde, et les faire se parler directement."
-  }
-]
-```
-
-### `certifications.json`
-```json
-[
-  {
-    "id": "dc-data-scientist",
-    "name": "Data Scientist Professional",
-    "issuer": "DataCamp",
-    "dateObtained": "2024-12",
-    "credentialUrl": "https://...",
-    "badgeUrl": "/assets/certs/datacamp-ds.png"
-  }
-]
-```
-
----
-
 ## 🔐 Admin Authentication
 
 Simple approach for MVP:
@@ -305,36 +210,17 @@ Simple approach for MVP:
 3. Set env var `VITE_ADMIN_PASSWORD` in Vercel dashboard
 4. Buy domain on **Porkbun** (~10€/year for `.com` or `.dev`)
 5. Configure custom domain in Vercel (automatic HTTPS)
-6. Every `git push main` = automatic deploy ✅
-
----
-
-## ✅ Claude Code Instructions
-
-When implementing this project, Claude Code must:
-
-1. **Always follow the design system** defined in this README (colors, fonts, aesthetic)
-2. **Never use Inter, Roboto, or system fonts** — use the specified typography
-3. **All data lives in `/src/data/*.json`** — no hardcoded content in components
-4. **Components must be modular** — one responsibility per component
-5. **Admin route `/admin` must be fully protected** — never render without auth
-6. **Use Framer Motion** for all animations — no raw CSS transitions for interactive elements
-7. **Mobile-first responsive design** — Tailwind breakpoints `sm`, `md`, `lg`
-8. **All text content in French or English** — Paul will fill in real content
-9. **Use placeholder data** from the schemas above until real data is provided
-10. **Commit-friendly JSON files** — any admin edit should produce clean, readable JSON
+6. Every `git push main` = automatic deploy 
 
 ---
 
 ## 👤 About Paul
 
-- Background: Business school (École de Commerce)
+- Background: Business school & passionate about sciences
 - Current: Junior Data Scientist, recently completed 6-month internship at **Engie**
-- Stack: Python, SQL, ML libraries (scikit-learn, etc.), DataCamp ecosystem
-- Goals: Land a CDI as Data Scientist, keep learning, document everything
-- This site proves: technical depth, self-direction, and ambition beyond the CV
+- Stack: Python, SQL, ML, Tableau/PowerBI, Agentic architectures, Spec driven Devlopement, DataCamp courses ecosystem 
+- Goals: Land a VIE as Data Scientist, keep learning, stay ambitious, enlarge my capabilities in tech, and get some experiences in enriching environments.
 
 ---
 
-*README generated as project brief for Claude Code agent context.*  
-*Last updated: 2025*
+*Last updated: 15-04-2026*
