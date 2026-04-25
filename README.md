@@ -1,25 +1,25 @@
-# Paul's Portfolio — Recruiter-Grade Data Science Showcase
+# Paul's Portfolio — Data Science Showcase — Learning Log
 
 > A public-facing portfolio designed to go beyond a traditional CV.  
 > Built for recruiters, hiring managers, and the data science community.  
-> *"Junior in experience. Senior in mindset."*
+> *Data Scientist Junior - Finance · ML · Data Engineering*
 
 ---
 
 ## 🎯 Project Purpose
 
-This site is the public extension of Paul's CV. It is not a standard portfolio.  
+This site is the public extension of my CV. It is not a standard portfolio.  
 It is a **living knowledge base**, a **project showcase**, and a **signal of technical ambition**, all in one.
 
 Target audience:
-- Recruiters at tech/data companies
+- Recruiters in the tech/data field
 - Hiring managers evaluating junior Data Science candidates
-- Anyone who wants to understand what Paul knows, how he thinks, and what he's building
+- Anyone who wants to understand what technologies I use, how i think, or what I am building
 
 Core message to convey:
-- I come from a business school background but have real **auto-didact technical depth**
+- I come from a business school background and have an **auto-didact technical depth**
 - I'm a **self-driven learner** who documents and shares what i am learning
-- I target to **be above the average junior candidate**
+- I'm building my technical depth in public. Every keyword I learn ends up in this site's Knowledge Library.
 
 ---
 
@@ -218,8 +218,9 @@ Simple approach for MVP:
 
 - Background: Business school & passionate about sciences
 - Current: Junior Data Scientist, recently completed 6-month internship at **Engie**
-- Stack: Python, SQL, ML, Tableau/PowerBI, Agentic architectures, Spec driven Devlopement, DataCamp courses ecosystem 
-- Goals: Land a VIE as Data Scientist, keep learning, stay ambitious, enlarge my capabilities in tech, and get some experiences in enriching environments.
+- Stack: Python, SQL, ML, Tableau/PowerBI, Spec driven Development, DataCamp courses ecosystem 
+- Goals: Land a CDI as Data Scientist, keep learning, stay ambitious, enlarge my capabilities in tech, and get some experiences working on real-world data problems.
+- Long-term vision : Land a VIE and get some more experience around the world.
 
 ---
 
