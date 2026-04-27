@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#0a0e0c"/>
+  
+  <!-- World cloud effect -->
+  <g font-family="'Courier New', monospace" fill="#5eead4">
+    <text x="100" y="100" font-size="13" opacity="0.35" transform="rotate(-8 100 100)">scikit-learn</text>
+    <text x="630" y="120" font-size="11" opacity="0.25" transform="rotate(12 630 120)">FastAPI</text>
+    <text x="80" y="380" font-size="10" opacity="0.2" transform="rotate(15 80 380)">pandas</text>
+    <text x="600" y="400" font-size="12" opacity="0.3" transform="rotate(-5 600 400)">Cross-validation</text>
+    <text x="200" y="160" font-size="11" opacity="0.25" transform="rotate(-12 200 160)">EDA</text>
+    <text x="660" y="220" font-size="14" opacity="0.4" transform="rotate(8 660 220)">SQL</text>
+    <text x="100" y="240" font-size="9" opacity="0.18" transform="rotate(20 100 240)">p-value</text>
+    <text x="650" y="320" font-size="10" opacity="0.22" transform="rotate(-10 650 320)">Docker</text>
+    <text x="120" y="320" font-size="11" opacity="0.28" transform="rotate(5 120 320)">Tests d'hypothèses</text>
+    <text x="60" y="180" font-size="10" opacity="0.2" transform="rotate(-15 60 180)">CSV</text>
+    <text x="700" y="160" font-size="9" opacity="0.18">API REST</text>
+    <text x="150" y="430" font-size="10" opacity="0.22" transform="rotate(-3 150 430)">Python</text>
+    <text x="630" y="450" font-size="11" opacity="0.28">Pytest</text>
+    <text x="40" y="440" font-size="9" opacity="0.2">Git</text>
+  </g>
+  
+  <!-- Curseur clignotant style typewriter -->
+  <rect x="595" y="222" width="14" height="28" fill="#5eead4" opacity="0.85"/>
+  
+  <!-- Texte central -->
+  <text x="400" y="245" font-family="'Courier New', monospace" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">OpenPaul</text>
+  <text x="400" y="285" font-family="'Courier New', monospace" font-size="13" fill="#a3a8a5" text-anchor="middle" letter-spacing="2" opacity="0.85">Portfolio data science · Au-delà du CV.</text>
+  
+  <!-- Tag du haut -->
+  <text x="400" y="170" font-family="'Courier New', monospace" font-size="11" fill="#5eead4" text-anchor="middle" letter-spacing="4">PAUL</text>
+</svg>

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="bg2a" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0a1612" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#03060a" stop-opacity="1"/>
+    </radialGradient>
+    
+    <linearGradient id="flowCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#5eead4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </linearGradient>
+    
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#bg2a)"/>
+  
+  <!-- ARRIÈRE-PLAN : code/data en filigrane -->
+  <g opacity="0.06" font-family="'Courier New', monospace" font-size="10" fill="#5eead4">
+    <text x="40" y="120">order_id: 8721 | desc: "maintenance pump XJ-12"</text>
+    <text x="40" y="140">order_id: 8722 | desc: "consulting hours Q4"</text>
+    <text x="40" y="160">order_id: 8723 | desc: "steel pipes 50mm x200"</text>
+    <text x="40" y="180">order_id: 8724 | desc: "training session"</text>
+    <text x="40" y="200">order_id: 8725 | desc: "raw material aluminium"</text>
+    <text x="40" y="380">label: GOODS  | conf: 0.94</text>
+    <text x="40" y="400">label: SERVICES | conf: 0.87</text>
+    <text x="40" y="420">label: GOODS  | conf: 0.91</text>
+    <text x="500" y="380">family: L3.MAINT.PUMPS</text>
+    <text x="500" y="400">family: L2.PROF_SERVICES</text>
+    <text x="500" y="420">contract: FW-2024-PUMP-EU</text>
+  </g>
+  
+  <!-- COURBE DE FLUX PRINCIPALE -->
+  <path d="M 40 280 Q 200 280, 280 220 T 520 240 Q 600 250, 760 220" 
+        stroke="url(#flowCyan)" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M 40 280 Q 200 280, 280 220 T 520 240 Q 600 250, 760 220" 
+        stroke="#5eead4" stroke-width="1" fill="none" opacity="0.4"/>
+  
+  <!-- Particules sur le flux -->
+  <g opacity="0.85">
+    <circle cx="100" cy="280" r="3" fill="#5eead4"/>
+    <circle cx="160" cy="278" r="2" fill="#5eead4" opacity="0.7"/>
+    <circle cx="220" cy="265" r="2.5" fill="#5eead4"/>
+    <circle cx="350" cy="200" r="3" fill="#5eead4"/>
+    <circle cx="450" cy="225" r="2" fill="#5eead4" opacity="0.6"/>
+    <circle cx="600" cy="245" r="2.5" fill="#fb923c"/>
+    <circle cx="690" cy="232" r="3" fill="#fb923c"/>
+    <circle cx="730" cy="225" r="2" fill="#fb923c" opacity="0.7"/>
+  </g>
+  
+  <!-- HALO 1 : ORDERS -->
+  <ellipse cx="80" cy="280" rx="60" ry="50" fill="url(#glowCyan)"/>
+  
+  <!-- NODE 1 : ORDERS -->
+  <g transform="translate(60, 250)">
+    <rect x="0" y="0" width="60" height="60" rx="3" fill="#0d1814" stroke="#5eead4" stroke-width="1.5"/>
+    <line x1="10" y1="15" x2="50" y2="15" stroke="#5eead4" stroke-width="1" opacity="0.8"/>
+    <line x1="10" y1="22" x2="45" y2="22" stroke="#5eead4" stroke-width="1" opacity="0.7"/>
+    <line x1="10" y1="29" x2="48" y2="29" stroke="#5eead4" stroke-width="1" opacity="0.6"/>
+    <line x1="10" y1="36" x2="42" y2="36" stroke="#5eead4" stroke-width="1" opacity="0.5"/>
+    <line x1="10" y1="43" x2="47" y2="43" stroke="#5eead4" stroke-width="1" opacity="0.4"/>
+    <text x="30" y="55" font-family="'Courier New', monospace" font-size="7" fill="#5eead4" text-anchor="middle" opacity="0.85">raw</text>
+  </g>
+  <text x="90" y="335" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.7" letter-spacing="2">ORDERS</text>
+  
+  <!-- HALO 2 : CLASSIFIER -->
+  <ellipse cx="290" cy="220" rx="70" ry="55" fill="url(#glowCyan)"/>
+  
+  <!-- NODE 2 : ML/NLP CLASSIFIER -->
+  <g transform="translate(245, 175)">
+    <rect x="0" y="0" width="90" height="90" rx="4" fill="#0d1814" stroke="#5eead4" stroke-width="1.5"/>
+    
+    <g opacity="0.85">
+      <circle cx="20" cy="25" r="2.5" fill="#5eead4"/>
+      <circle cx="20" cy="40" r="2.5" fill="#5eead4"/>
+      <circle cx="20" cy="55" r="2.5" fill="#5eead4"/>
+      <circle cx="45" cy="20" r="2.5" fill="#5eead4" opacity="0.7"/>
+      <circle cx="45" cy="35" r="2.5" fill="#5eead4" opacity="0.7"/>
+      <circle cx="45" cy="50" r="2.5" fill="#5eead4" opacity="0.7"/>
+      <circle cx="45" cy="65" r="2.5" fill="#5eead4" opacity="0.7"/>
+      <circle cx="70" cy="32" r="3" fill="#5eead4"/>
+      <circle cx="70" cy="55" r="3" fill="#fb923c"/>
+      
+      <g stroke="#5eead4" stroke-width="0.4" opacity="0.5">
+        <line x1="22" y1="25" x2="43" y2="20"/>
+        <line x1="22" y1="25" x2="43" y2="35"/>
+        <line x1="22" y1="25" x2="43" y2="50"/>
+        <line x1="22" y1="40" x2="43" y2="20"/>
+        <line x1="22" y1="40" x2="43" y2="35"/>
+        <line x1="22" y1="40" x2="43" y2="50"/>
+        <line x1="22" y1="40" x2="43" y2="65"/>
+        <line x1="22" y1="55" x2="43" y2="35"/>
+        <line x1="22" y1="55" x2="43" y2="50"/>
+        <line x1="22" y1="55" x2="43" y2="65"/>
+        <line x1="47" y1="20" x2="68" y2="32"/>
+        <line x1="47" y1="35" x2="68" y2="32"/>
+        <line x1="47" y1="50" x2="68" y2="55"/>
+        <line x1="47" y1="65" x2="68" y2="55"/>
+      </g>
+      
+      <text x="73" y="35" font-family="'Courier New', monospace" font-size="7" fill="#5eead4" opacity="0.9">G</text>
+      <text x="73" y="58" font-family="'Courier New', monospace" font-size="7" fill="#fb923c" opacity="0.9">S</text>
+    </g>
+    
+    <text x="45" y="84" font-family="'Courier New', monospace" font-size="6" fill="#5eead4" text-anchor="middle" opacity="0.6">TF-IDF + RF</text>
+  </g>
+  <text x="290" y="290" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.7" letter-spacing="2">CLASSIFIER</text>
+  
+  <!-- HALO 3 : HIERARCHY -->
+  <ellipse cx="510" cy="240" rx="70" ry="55" fill="url(#glowCyan)"/>
+  
+  <!-- NODE 3 : HIERARCHY TREE -->
+  <g transform="translate(465, 195)">
+    <rect x="0" y="0" width="90" height="90" rx="4" fill="#0d1814" stroke="#5eead4" stroke-width="1.5"/>
+    
+    <g opacity="0.9">
+      <rect x="35" y="10" width="20" height="10" rx="1" fill="#5eead4" opacity="0.85"/>
+      <text x="45" y="18" font-family="'Courier New', monospace" font-size="6" fill="#0a0a0a" text-anchor="middle" font-weight="700">L1</text>
+      
+      <line x1="45" y1="20" x2="45" y2="28" stroke="#5eead4" stroke-width="0.8" opacity="0.6"/>
+      <line x1="20" y1="28" x2="70" y2="28" stroke="#5eead4" stroke-width="0.8" opacity="0.6"/>
+      <line x1="20" y1="28" x2="20" y2="34" stroke="#5eead4" stroke-width="0.8" opacity="0.6"/>
+      <line x1="45" y1="28" x2="45" y2="34" stroke="#5eead4" stroke-width="0.8" opacity="0.6"/>
+      <line x1="70" y1="28" x2="70" y2="34" stroke="#5eead4" stroke-width="0.8" opacity="0.6"/>
+      
+      <rect x="13" y="34" width="14" height="8" rx="1" fill="none" stroke="#5eead4" stroke-width="0.8" opacity="0.7"/>
+      <rect x="38" y="34" width="14" height="8" rx="1" fill="none" stroke="#5eead4" stroke-width="0.8" opacity="0.7"/>
+      <rect x="63" y="34" width="14" height="8" rx="1" fill="none" stroke="#5eead4" stroke-width="0.8" opacity="0.7"/>
+      
+      <line x1="20" y1="42" x2="20" y2="50" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="13" y1="50" x2="27" y2="50" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="13" y1="50" x2="13" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="20" y1="50" x2="20" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="27" y1="50" x2="27" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      
+      <line x1="45" y1="42" x2="45" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="38" y1="50" x2="52" y2="50" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="38" y1="50" x2="38" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="52" y1="50" x2="52" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      
+      <line x1="70" y1="42" x2="70" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="63" y1="50" x2="77" y2="50" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="63" y1="50" x2="63" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      <line x1="77" y1="50" x2="77" y2="55" stroke="#5eead4" stroke-width="0.6" opacity="0.5"/>
+      
+      <circle cx="13" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="20" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="27" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="38" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="45" cy="58" r="1.5" fill="#fb923c" opacity="0.85"/>
+      <circle cx="52" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="63" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="70" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+      <circle cx="77" cy="58" r="1.5" fill="#5eead4" opacity="0.6"/>
+    </g>
+    
+    <text x="45" y="78" font-family="'Courier New', monospace" font-size="6" fill="#5eead4" text-anchor="middle" opacity="0.6">L1 / L2 / L3</text>
+  </g>
+  <text x="510" y="310" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.7" letter-spacing="2">RECLASSIFICATION</text>
+  
+  <!-- HALO 4 : FRAMEWORK -->
+  <ellipse cx="710" cy="225" rx="55" ry="50" fill="url(#glowOrange)"/>
+  
+  <!-- NODE 4 : FRAMEWORK -->
+  <g transform="translate(680, 195)">
+    <rect x="0" y="0" width="60" height="60" rx="3" fill="#0d1814" stroke="#fb923c" stroke-width="1.5"/>
+    <rect x="12" y="10" width="36" height="42" rx="1" fill="none" stroke="#fb923c" stroke-width="0.8"/>
+    <line x1="18" y1="18" x2="42" y2="18" stroke="#fb923c" stroke-width="0.6" opacity="0.7"/>
+    <line x1="18" y1="24" x2="42" y2="24" stroke="#fb923c" stroke-width="0.6" opacity="0.7"/>
+    <line x1="18" y1="30" x2="38" y2="30" stroke="#fb923c" stroke-width="0.6" opacity="0.7"/>
+    <line x1="18" y1="36" x2="40" y2="36" stroke="#fb923c" stroke-width="0.6" opacity="0.7"/>
+    <line x1="18" y1="42" x2="35" y2="42" stroke="#fb923c" stroke-width="0.6" opacity="0.7"/>
+    <circle cx="38" cy="46" r="3" fill="none" stroke="#fb923c" stroke-width="0.8"/>
+    <circle cx="38" cy="46" r="1" fill="#fb923c"/>
+  </g>
+  <text x="710" y="285" font-family="'Courier New', monospace" font-size="9" fill="#fb923c" text-anchor="middle" opacity="0.85" letter-spacing="2">FRAMEWORK</text>
+  
+  <!-- TITLE -->
+  <text x="50" y="50" font-family="'Courier New', monospace" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="1">GoodSense</text>
+  <text x="50" y="72" font-family="'Courier New', monospace" font-size="10" fill="#5eead4" letter-spacing="2" opacity="0.75">PROCUREMENT INTELLIGENCE · BIG DATA ML/NLP</text>
+  
+  <text x="745" y="50" font-family="'Courier New', monospace" font-size="9" fill="#fb923c" text-anchor="end" opacity="0.65" letter-spacing="2">ENGIE · AI LAB</text>
+  <text x="745" y="68" font-family="'Courier New', monospace" font-size="8" fill="#5eead4" text-anchor="end" opacity="0.5" letter-spacing="1">2025 — 2026</text>
+  
+  <!-- Footer line + stack -->
+  <line x1="50" y1="430" x2="750" y2="430" stroke="#5eead4" stroke-width="0.5" opacity="0.2"/>
+  <text x="400" y="455" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.55" letter-spacing="3">PYTHON · PYSPARK · DATABRICKS · MLFLOW · GITLAB CI/CD · NLP</text>
+</svg>

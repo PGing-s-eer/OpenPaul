@@ -5,7 +5,7 @@
     "issuer": "Blue Courses",
     "dateObtained": "2025-03",
     "credentialUrl": "https://www.bluecourses.com/certificates/61d81e6d324640549afd9c5f1789b05c",
-    "badgeUrl": null
+    "badgeUrl": "/assets/certifications/deep-learning-essentials.pdf"
   },
   {
     "id": "dc-python-programmer",
@@ -13,7 +13,7 @@
     "issuer": "Python Developer",
     "dateObtained": "2025-01",
     "credentialUrl": "https://www.credly.com/badges/abbdce56-83ca-4f20-a696-869aef4f165e/public_url",
-    "badgeUrl": null
+    "badgeUrl": "/assets/certifications/pcep-certified-entry-level-python-programmer.png"
   },
   {
     "id": "dc-sql-fundamentals",
@@ -21,6 +21,6 @@
     "issuer": "Tableau",
     "dateObtained": "2024-12",
     "credentialUrl": "https://www.credly.com/badges/307944d0-f6b3-40d2-9f4c-200496bb6b2d/public_url",
-    "badgeUrl": null
+    "badgeUrl": "/assets/certifications/tableau-desktop-specialist.png"
   }
 ]
