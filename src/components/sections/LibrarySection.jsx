@@ -13,6 +13,7 @@ const CHIP_ORDER = [
   'Tool',
   'Methodology',
   'Concept',
+  'Algorithm',
 ]
 
 const CHIP_LABEL = {
@@ -23,6 +24,7 @@ const CHIP_LABEL = {
   Tool: 'Outil',
   Methodology: 'Méthodologie',
   Concept: 'Concept',
+  Algorithm: 'Algorithm',
 }
 
 export function LibrarySection() {
