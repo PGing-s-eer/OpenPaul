@@ -8,6 +8,7 @@ const CATEGORIES = [
   'Tool',
   'Methodology',
   'Concept',
+  'Algorithm',
 ]
 
 const emptyDraft = {

@@ -13,9 +13,9 @@
     "name": "Docker",
     "category": "Tool",
     "subcategory": "Conteneurs",
-    "dateAdded": "2026-03-28",
-    "note": "Empaqueter une app et ses dépendances dans une image reproductible.",
-    "analogy": "Une boîte de déménagement étiquetée : on ouvre n’importe où, le contenu est identique."
+    "dateAdded": "2026-03-02",
+    "note": "Empaqueter une app et ses dépendances dans une image reproductible",
+    "analogy": "Une boîte de déménagement étiquetée : on ouvre n’importe où, le contenu est identique"
   },
   {
     "id": "fastapi",
@@ -24,159 +24,366 @@
     "subcategory": "API",
     "dateAdded": "2026-03-15",
     "note": "Framework Python pour APIs rapides, typage et docs OpenAPI auto.",
-    "analogy": "Un guichet express : tu déclares ce que tu vends, la file d’attente (la doc) se génère toute seule."
+    "analogy": "Tu écris le code typé, FastAPI devine le reste"
   },
   {
     "id": "pytest",
     "name": "pytest",
-    "category": "Tool",
+    "category": "Framework",
     "subcategory": "Tests",
-    "dateAdded": "2026-03-02",
-    "note": "Lancer des tests unitaires et d’intégration avec des fixtures réutilisables.",
-    "analogy": "Une checklist avant d’ouvrir le magasin : si un item casse, tu sais lequel."
+    "dateAdded": "2025-11-27",
+    "note": "Lancer des tests unitaires et d’intégration avec des fixtures réutilisables",
+    "analogy": "Tester toutes les collisions possibles en labo avant de mettre la voiture sur la route"
   },
   {
     "id": "cross-validation",
     "name": "Cross-validation",
     "category": "Methodology",
     "subcategory": "ML",
-    "dateAdded": "2026-02-20",
-    "note": "Découper les données en plis pour estimer la performance sans biais d’optimisme.",
-    "analogy": "Réviser avec plusieurs sujets d’examen au lieu de mémoriser les réponses d’un seul."
+    "dateAdded": "2024-12-10",
+    "note": "Découper les données en K folds pour estimer la performance sans biais d’optimisme grace au test de stabilité du modèle",
+    "analogy": "Jouer contre 5 adversaires différents pour vraiment évaluer ton niveau, pas juste contre un"
   },
   {
     "id": "matplotlib",
     "name": "matplotlib",
     "category": "Library",
     "subcategory": "Visualisation",
-    "dateAdded": "2026-02-08",
-    "note": "Tracer des graphiques en Python, couche bas niveau très contrôlable.",
-    "analogy": "Les crayons de couleur du data scientist : un peu verbeux, mais tout est possible."
+    "dateAdded": "2024-07-16",
+    "note": "Bibliothèque de graphique python",
+    "analogy": "Les crayons de couleur du data scientist"
   },
   {
     "id": "numpy",
     "name": "NumPy",
     "category": "Library",
     "subcategory": "Calcul",
-    "dateAdded": "2026-01-25",
-    "note": "Tableaux n-dimensionnels et opérations vectorisées en C sous le capot.",
-    "analogy": "Le moteur électrique sous le capot : tu conduis en Python, la puissance est ailleurs."
+    "dateAdded": "2024-02-13",
+    "note": "Bibliothèque python (codé en C) pour faire des calculs sur des tableau à X dimensions",
+    "analogy": "Moteur turbo V12 sous les calculs python"
   },
   {
     "id": "jupyter",
     "name": "Jupyter",
     "category": "Tool",
     "subcategory": "Notebooks",
-    "dateAdded": "2026-01-10",
-    "note": "Notebooks interactifs pour explorer des données et documenter des essais.",
-    "analogy": "Un carnet de laboratoire où tu mélanges texte, code et graphiques."
+    "dateAdded": "2024-02-13",
+    "note": "Grande feuille interactive pour experimenter du code sur une interface agréable et ordonnée.",
+    "analogy": "Un carnet de d'experimentation avec texte, code et graphiques."
   },
   {
     "id": "regex",
     "name": "Expressions régulières",
     "category": "Concept",
     "subcategory": "Texte",
-    "dateAdded": "2025-12-18",
-    "note": "Motifs pour chercher, extraire ou valider du texte structuré ou semi-structuré.",
-    "analogy": "Un tamis avec des trous de tailles précises : seuls les grains qui matchent passent."
+    "dateAdded": "2024-04-16",
+    "note": "Motifs pour chercher, extraire ou valider du texte structuré ou semi-structuré",
+    "analogy": "Un filtre à paterne alphanumérique"
   },
   {
     "id": "rest",
     "name": "API REST",
     "category": "Concept",
     "subcategory": "Web",
-    "dateAdded": "2025-12-01",
-    "note": "Style d’API HTTP centré sur des ressources, verbes (GET, POST…) et codes de statut.",
-    "analogy": "Un menu de restaurant : des plats (ressources) et des actions standard pour commander."
+    "dateAdded": "2026-01-05",
+    "note": "Style d’API HTTP centré sur le respect du style d'architecture REST. Chaque objet a une adresse unique. Actions standardisées : GET, POST, PUT, DELETE.",
+    "analogy": "CRUD sur HTTP : Create→POST, Read→GET, Update→PUT, Delete→DELETE"
   },
   {
     "id": "streamlit",
     "name": "Streamlit",
     "category": "Framework",
     "subcategory": "Apps",
-    "dateAdded": "2025-11-15",
-    "note": "Prototyper des apps data en Python rapidement.",
-    "analogy": "Une vitrine pour montrer un modèle sans écrire du front lourd."
+    "dateAdded": "2024-11-13",
+    "note": "Prototyper des apps data en Python rapidement",
+    "analogy": "Une vitrine pour montrer un modèle sans écrire du front lourd"
   },
   {
     "id": "git",
     "name": "Git",
     "category": "Tool",
     "subcategory": "Versioning",
-    "dateAdded": "2025-11-01",
-    "note": "Historique et collaboration sur le code.",
-    "analogy": "Une machine à voyager dans le temps pour les fichiers."
+    "dateAdded": "2025-01-15",
+    "note": "Historique et collaboration sur le code",
+    "analogy": "Hitorique et version de l'état du code."
   },
   {
     "id": "sql",
     "name": "SQL",
     "category": "Language",
     "subcategory": "Bases relationnelles",
-    "dateAdded": "2025-10-20",
+    "dateAdded": "2024-11-11",
     "note": "Interrogation et agrégation de données relationnelles.",
-    "analogy": "Demander poliment à une base ce qu’elle sait."
+    "analogy": "Demander à une base de nous retrouver une information"
   },
   {
     "id": "scikit-learn",
     "name": "scikit-learn",
     "category": "Library",
     "subcategory": "ML",
-    "dateAdded": "2025-09-28",
-    "note": "Modèles ML classiques et pipelines.",
-    "analogy": "L’établi où l’on assemble des modèles sans usine entière."
+    "dateAdded": "2024-02-19",
+    "note": "Modèles ML classiques et pipelines",
+    "analogy": "Catalogue d'éléments permettant le machine learning."
   },
   {
     "id": "pandas",
     "name": "pandas",
     "category": "Library",
     "subcategory": "Manipulation",
-    "dateAdded": "2025-09-05",
-    "note": "Tables et séries pour manipuler des données tabulaires.",
-    "analogy": "Excel programmable, en mieux."
+    "dateAdded": "2024-02-13",
+    "note": "Tables et séries pour manipuler des données tabulaires",
+    "analogy": "L'Excel de la programmation, en mieux."
   },
   {
     "id": "python",
     "name": "Python",
     "category": "Language",
     "subcategory": "Général",
-    "dateAdded": "2025-08-20",
-    "note": "Langage de référence pour la data et le ML.",
-    "analogy": "La boîte à outils principale sur un chantier data."
+    "dateAdded": "2024-02-07",
+    "note": "Langage de référence pour la data et le ML",
+    "analogy": "La boîte à outils principale sur un chantier data"
   },
   {
     "id": "eda",
     "name": "EDA",
     "category": "Methodology",
     "subcategory": "Exploration",
-    "dateAdded": "2025-08-01",
+    "dateAdded": "2024-08-28",
     "note": "Exploration visuelle et statistique des données avant modélisation.",
-    "analogy": "Fouiller un grenier avant de décider quoi vendre ou réparer."
+    "analogy": "Fouiller un grenier avant de décider quoi faire de ce que l'on trouve."
   },
   {
-    "id": "hypothesis-testing",
-    "name": "Tests d’hypothèses",
+    "id": "r",
+    "name": "R",
+    "category": "Language",
+    "dateAdded": "2023-10-10",
+    "note": "statistical computing language tool",
+    "analogy": null,
+    "subcategory": null
+  },
+  {
+    "id": "linear-regression",
+    "name": "Linear Regression",
+    "category": "Concept",
+    "dateAdded": "2023-10-15",
+    "note": "Modèle de régression qui cherche à établir une relation linéaire entre une variable ou plusieurs",
+    "analogy": null,
+    "subcategory": "Statistical model"
+  },
+  {
+    "id": "knn",
+    "name": "KNN",
+    "category": "Algorithm",
+    "dateAdded": "2023-10-15",
+    "note": "Algorithme qui partant d'un point de données calcule une distance par rapport aux points voisins, et prend une décision basée sur ces distances.\nSupervisé",
+    "analogy": "Dis-moi qui sont tes voisins, je te dirai qui tu es",
+    "subcategory": "Classification"
+  },
+  {
+    "id": "r-studio",
+    "name": "R Studio",
+    "category": "Tool",
+    "dateAdded": "2023-10-10",
+    "note": "Environnement de développement de calculs statistiques autour du language R. \nIDE",
+    "analogy": "RStudio = Voiture, R= Moteur",
+    "subcategory": "IDE"
+  },
+  {
+    "id": "clustering",
+    "name": "Clustering",
     "category": "Methodology",
-    "subcategory": "Statistiques",
-    "dateAdded": "2025-07-12",
-    "note": "Comparer des groupes ou mesurer la significativité d’un effet observé.",
-    "analogy": "Un procès : preuves pour ou contre l’hypothèse « rien ne se passe »."
+    "dateAdded": "2023-10-10",
+    "note": "Méthode qui consiste a regrouper des données similaires sans qu'elles n'appartiennent à un groupe (label) initiallement. Basé sur une similarité calculée par distance.",
+    "analogy": "Ok, ces gens-là semblent être des groupes d’amis. Il y'en a un ici, un là, puis un là-bas.",
+    "subcategory": "Unsupervised learning"
   },
   {
-    "id": "p-value",
-    "name": "p-value",
-    "category": "Concept",
-    "subcategory": "Statistiques",
-    "dateAdded": "2025-06-20",
-    "note": "Probabilité d’observer un résultat au moins aussi extrême si l’hypothèse nulle est vraie.",
-    "analogy": "La probabilité que le hasard seul joue le même tour de magie."
+    "id": "normalization",
+    "name": "Normalization",
+    "category": "Methodology",
+    "dateAdded": "2023-10-12",
+    "note": "Préparation de donnée pour un algorithme afin de rendre comparable ce qui ne l'es pas.\nPar exemple : Ramener toutes les variables entre 0 et 1 pour que l'âge (0-100) n'écrase pas le salaire (20k-200k) dans l'apprentissage",
+    "analogy": "Convertir différents système de notation en pourcentage.",
+    "subcategory": "Transformation"
   },
   {
-    "id": "csv",
-    "name": "CSV",
+    "id": "svm",
+    "name": "SVM",
+    "category": "Algorithm",
+    "dateAdded": "2024-03-04",
+    "note": "Modèle d'apprentissage supervisé pour de la classification. Cherche la meilleure séparation (maximisation) entre plusieurs groupes. Parfois en projettant d'autres dimensions",
+    "analogy": "Tracer la frontière la plus sûre",
+    "subcategory": "Supervised-Learning"
+  },
+  {
+    "id": "monte-carlo-simulation",
+    "name": "Monte Carlo Simulation",
+    "category": "Methodology",
+    "dateAdded": "2024-11-07",
+    "note": "Trop ouvert pour etre calculé ? Trop aléatoire ? Simule des milliers d'essais et prend la moyenne comme vérité la plus probable.",
+    "analogy": "Tu veux savoir tes chances de gagner à la roulette ? Joue 10 000 parties et compte",
+    "subcategory": "Simulation probabiliste"
+  },
+  {
+    "id": "api",
+    "name": "API",
     "category": "Concept",
-    "subcategory": "Données",
-    "dateAdded": "2025-06-01",
-    "note": "Format texte tabulaire délimité par des virgules (ou autre séparateur).",
-    "analogy": "Une feuille de calcul déshabillée : plus léger, moins de fioritures."
+    "dateAdded": "2025-07-22",
+    "note": "Permet la communication entre deux programmes ne connaissant pas le language interne de l'autre à travers un contrat formatée d'entrée/sortie",
+    "analogy": "Commander un repas à travers un serveur sans savoir comment ça se passe en cuisine.",
+    "subcategory": "Contrat de communication"
+  },
+  {
+    "id": "crud",
+    "name": "CRUD",
+    "category": "Concept",
+    "dateAdded": "2025-10-22",
+    "note": "Créer, lire, modifier, supprimer des éléments. (Dans une base de donnée par exemple). Les actions minimale de stockage.",
+    "analogy": "Create, Read, Update, Delete",
+    "subcategory": "Data"
+  },
+  {
+    "id": "excel",
+    "name": "Excel",
+    "category": "Tool",
+    "dateAdded": "2019-01-01",
+    "note": "Interface visuelle simples de tables pour calculs et formules, accessible à tous.",
+    "analogy": "La drogue douce de la data : tout le monde commence par Excel, puis certains passent à Python/SQL",
+    "subcategory": "Tableur"
+  },
+  {
+    "id": "scraping",
+    "name": "Scraping",
+    "category": "Concept",
+    "dateAdded": "2024-03-26",
+    "note": "Technique d'extraction automatisée de données depuis des sites web. BeautifulSoup",
+    "analogy": "Automatiser la copie de données visibles sur le web",
+    "subcategory": "Web"
+  },
+  {
+    "id": "kpi",
+    "name": "KPI",
+    "category": "Concept",
+    "dateAdded": "2024-11-26",
+    "note": "Chiffre actionnable et aligné sur l'atteinte d'objectifs",
+    "analogy": "Les 5-6 instruments critiques que le pilote surveille constamment : altitude, vitesse, carburant. Le reste c'est du bruit",
+    "subcategory": "Business"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "category": "Tool",
+    "dateAdded": "2024-11-12",
+    "note": "La Base de donnée relationnelle la plus puissante du monde open source",
+    "analogy": "Base de donnée OpenSource la plus robuste",
+    "subcategory": "Base de données"
+  },
+  {
+    "id": "lift-gain-curve",
+    "name": "Lift/Gain Curve",
+    "category": "Concept",
+    "dateAdded": "2024-12-17",
+    "note": "LIFT : Si je contacte que les 20% les plus probables selon mon modèle, je capte 60% des vrais clients, c'est 3x mieux que l'aléatoire (lift = 3).\nGAIN : Visualiser combien de gains on fait en ciblant intelligemment vs contacter tout le monde au hasard",
+    "analogy": "Envoyer 1000 emails au hasard → 50 conversions. Cibler les 1000 avec le meilleur score → 200 conversions. Lift = 4x",
+    "subcategory": "Performance"
+  },
+  {
+    "id": "random-forest",
+    "name": "Random Forest",
+    "category": "Algorithm",
+    "dateAdded": "2024-12-09",
+    "note": "Entraîner une forêt d'arbres de décision sur des données légèrement différentes, puis les faire voter. Principe de la sagesse des foules.",
+    "analogy": "Un arbre peut se tromper, mais 100 arbres qui votent font rarement n'importe quoi",
+    "subcategory": "Machine Learning"
+  },
+  {
+    "id": "hyperparameter-tuning",
+    "name": "Hyperparameter Tuning",
+    "category": "Concept",
+    "dateAdded": "2024-12-07",
+    "note": "Trouver les bons réglages du modèle par essais-erreurs intelligents",
+    "analogy": "Toucher un peu a tous les boutons pour voir quel configuration donne le meilleur résultat",
+    "subcategory": "ML"
+  },
+  {
+    "id": "tableau",
+    "name": "Tableau",
+    "category": "Tool",
+    "dateAdded": "2024-10-05",
+    "note": "Créateur de dashboard interactif no/low code pour analyses / métier.\nInteractif, permet connexion a grand nombre de source. PowerBI en plus poussé.",
+    "analogy": "PowerBI en plus poussé",
+    "subcategory": "Visualisation"
+  },
+  {
+    "id": "sas",
+    "name": "SAS",
+    "category": "Language",
+    "dateAdded": "2024-12-22",
+    "note": "Le dinosaure de la data. L'outil que les banques et institutions sensibles utilisent encore parce que migrer coûterait trop cher.",
+    "analogy": "Le bunker ultra-sécurisé de la data : certifié FDA, validé par les régulateurs, zéro risque juridique",
+    "subcategory": "Stats - Legacy"
+  },
+  {
+    "id": "feature-engineering",
+    "name": "Feature Engineering",
+    "category": "Methodology",
+    "dateAdded": "2024-12-16",
+    "note": "Ratios, transformations, calculs crées à partir de variables pour exploiter l'information utile à l'apprentissage de paternes par un modèle.",
+    "analogy": "L'art de révéler ce qui est caché dans les données",
+    "subcategory": "ML"
+  },
+  {
+    "id": "spark",
+    "name": "Spark",
+    "category": "Framework",
+    "dateAdded": "2025-01-13",
+    "note": "Hadoop MapReduce était trop lent (écrit sur disque), Spark garde tout en mémoire (RAM). distribue le calcul sur des clusters. Calcul en parrallèle.",
+    "analogy": "Découper un gros problème en petits morceaux (Map), distribuer sur des machines, puis rassembler les résultats (Reduce)\"",
+    "subcategory": "Big Data"
+  },
+  {
+    "id": "pyspark",
+    "name": "PySpark",
+    "category": "Library",
+    "dateAdded": "2025-01-13",
+    "note": "Spark est en Scala, mais les data scientists préfèrent Python → API Python",
+    "analogy": "pandas = vélo. PySpark = vélo électrique avec remorque pour 10 tonnes",
+    "subcategory": "Big Data"
+  },
+  {
+    "id": "databricks",
+    "name": "Databricks",
+    "category": "Tool",
+    "dateAdded": "2025-01-15",
+    "note": "Spark clé-en-main dans le cloud : notebooks collaboratifs, clusters auto-gérés. Databricks gère Spark, le stockage, le ML, et tout le bordel infra",
+    "analogy": "Spark clé-en-main dans le cloud",
+    "subcategory": "Cloud - Big Data"
+  },
+  {
+    "id": "nlp",
+    "name": "NLP",
+    "category": "Concept",
+    "dateAdded": "2025-01-22",
+    "note": "Traitement du language humain en comprenant le sens, le contexte, la complexité latente - pas juste reconnaitre des lettres.",
+    "analogy": "Apprendre aux machines à comprendre, analyser et générer du langage humain avec toute son ambiguïté.",
+    "subcategory": "ML - Language"
+  },
+  {
+    "id": "seaborn",
+    "name": "Seaborn",
+    "category": "Library",
+    "dateAdded": "2024-09-10",
+    "note": "matplotlib = puissant mais moche et verbeux, \nSeaborn = plots statistiques beaux en 1 ligne de code",
+    "analogy": "Le cousin stylisé de matplotlib",
+    "subcategory": "Visualisation"
+  },
+  {
+    "id": "outlier",
+    "name": "Outlier",
+    "category": "Concept",
+    "dateAdded": "2024-04-08",
+    "note": "Notion de statistique, qualité de donnée. Les outliers peuvent biaiser les stats, casser les modèles. Ils peuvent etre une source de signal comme de bruit.",
+    "analogy": "Un paiement de 50 000€ dans un compte qui dépense 50€/jour. C'est pas forcément une erreur mais c'est peut-être une fraude à étudier",
+    "subcategory": "Preprocessing"
   }
 ]
