@@ -30,7 +30,15 @@ function ProjectModalContent({ project }) {
 
   return (
     <div className="space-y-6 text-sm leading-relaxed text-muted sm:text-base">
-      <p className="text-text/95">{project.fullDescription}</p>
+      {project.thumbnail ? (
+        <div className="overflow-hidden rounded-md border border-white/10">
+          <img
+            src={project.thumbnail}
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        </div>
+      ) : null}
 
       {project.methodology?.length ? (
         <div>
@@ -65,6 +73,8 @@ function ProjectModalContent({ project }) {
           ))}
         </ul>
       </div>
+
+      <p className="whitespace-pre-line text-text/95">{project.fullDescription}</p>
 
       {embed ? (
         <div className="overflow-hidden rounded-md border border-white/10">

@@ -3,7 +3,7 @@
     "id": "vision-patrimoine",
     "title": "VisionPatrimoine",
     "shortDescription": "Application full-stack de gestion patrimoniale.\nArchitecture 3-tier, modélisation relationnelle, module gouvernance.",
-    "fullDescription": "Hub analytique consolidant l'ensemble d'une vie financière (comptes \ncourants, épargne, investissements, crédits) en une vision Actif/Passif \nunifiée. Né d'un besoin perso d'automatisation, devenu mon laboratoire \nd'ingénierie logicielle.\n\nArchitecture en 3 couches :\n- SQLite + schéma relationnel complexe avec gestion stricte de l'intégrité référentielle\n- Backend Python — logique métier\n- Frontend Streamlit — dashboards interactifs Actif/Passif, analyse de \n  performance, simulations, gap analysis, analyse comportements d'achats etc.\n\nModule Data Health original :\nDétection automatique d'anomalies, doublons, virements internes orphelins, \n\"Reality Gap\" entre solde théorique et réel etc. \nGarantit la fiabilité des insights avant toute décision.\n\nModule Investissement :\nFormulaires, Positions des actifs, Expositions [Sectorielles, Géographique, Nature d'actif] Cibles d'allocation, Equarts Expositions/Cibles, Aides à la prise de décision, Dashboard performance etc.\n \nRoadmap en cours :\n- ML de catégorisation automatique des transactions\n- ML de prévision de solde dans le futur\n- Scanner de relevés de comptes\n- Connecteurs API bancaires (Open Banking)\n\nStack : Python · Streamlit · SQLite · Pandas · Plotly · Git · Spec-Driven Development\n\nCode source : projet privé, démo possible sur demande.",
+    "fullDescription": "Hub analytique consolidant l'ensemble d'une vie financière (comptes courants, épargne, investissements, crédits) en une vision Actif/Passif unifiée. \n Né d'un besoin perso d'automatisation, devenu mon laboratoire d'ingénierie logicielle. \n\n Architecture en 3 couches : \n- SQLite + schéma relationnel complexe avec gestion stricte de l'intégrité référentielle \n- Backend Python — logique métier\n- Frontend Streamlit — dashboards interactifs Actif/Passif, analyse de performance, simulations, gap analysis, analyse comportements d'achats etc.\n\n Module Data Health original :\n Détection automatique d'anomalies, doublons, virements internes orphelins, \n\"Reality Gap\" entre solde théorique et réel etc. \nGarantit la fiabilité des insights avant toute décision.\n\nModule Investissement :\nFormulaires, Positions des actifs, Expositions [Sectorielles, Géographique, Nature d'actif] Cibles d'allocation, Equarts Expositions/Cibles, Aides à la prise de décision, Dashboard performance etc.\n \nRoadmap en cours :\n- ML de catégorisation automatique des transactions\n- ML de prévision de solde dans le futur\n- Scanner de relevés de comptes\n- Connecteurs API bancaires (Open Banking)\n\nStack : Python · Streamlit · SQLite · Pandas · Plotly · Git · Spec-Driven Development\n\nCode source : projet privé, démo possible sur demande.",
     "tags": [
       "Python",
       "Streamlit",
@@ -30,7 +30,7 @@
   },
   {
     "id": "stage-engie",
-    "title": "GoodSense — Stage Data Scientist Engie",
+    "title": "GoodSense — Stage Engie",
     "shortDescription": "POC de classification ML/NLP d'achats à l'échelle Big Data, \nmené à l'AI Lab d'Engie pour optimiser les contrats-cadres groupe.",
     "fullDescription": "Stage de 6 mois (sept. 2025 – mars 2026) à l'AI Lab d'Engie, BU Local \nEnergy Infrastructure. Mission principale : conception d'un POC de \nclassification ML/NLP pour détecter les anomalies de catégorisation \nd'achats sur un volume de plusieurs millions de commandes, afin de maximiser l'utilisation des contrats-cadres groupe.\n\nImpact business projeté : plusieurs millions d'euros d'économies \nannuelles estimées sur le scope de test.\n\nCycle complet de mise en production :\n- Phase exploratoire sur Notebooks Databricks (benchmarks d'algos, \n  embeddings, traitement de la donnée)\n- Transition vers software engineering rigoureux : repo GitLab modulaire, \n  tests unitaires Pytest, CI/CD, intégration Databricks Connect\n- MLOps complet via MLflow — tracking des expérimentations, registre de \n  modèles, gestion stricte des environnements pré-prod / prod, versioning \n  pour répondre aux exigences sécurité\n\nDiagnostic transverse :\nLa mission a révélé des failles critiques de gouvernance dans les systèmes \nERP legacy. Investigations auprès des experts métiers (category manager, gestionnaires de contrats) pour cadrer ces problèmes de \ndata quality, déclenchant un pivot stratégique avant l'industrialisation.\n\nStack : Python · PySpark · Pandas · Scikit-Learn · Databricks · \nDatabricks Connect · MLflow · GitLab CI/CD · Pytest · NLP (Word2Vec, \nTF-IDF) · LLM par batch\n\nCode source : confidentiel (Engie).",
     "tags": [
@@ -41,43 +41,20 @@
       "Mlflow",
       "MLOps",
       "Procurement Analytics"
+      
     ],
     "methodology": [
       "POC/POV",
       "Documentation",
       "Reporting",
       "Collaboration métier",
-      "Stakeholder Management"
+      "Stakeholder Management",
+      "Benchmarking"
     ],
     "githubUrl": null,
     "demoUrl": null,
     "videoUrl": null,
     "thumbnail": "/assets/projects/goodsense-engie.svg",
-    "featured": false
-  },
-  {
-    "id": "diademe-stage-engie-nda",
-    "title": "Diademe — Stage Engie — Agentic AI",
-    "shortDescription": "Système Agentic de web fetch pour la veille de subventions de décarbonation. \nTech-watch et benchmark Custom vs. Low-Code (Gemini, Copilot Studio).",
-    "fullDescription": "Seconde mission pendant mon stage à l'AI Lab d'Engie. Conception \nd'un assistant conversationnel basé sur l'IA générative pour aider les \néquipes commerciales et projets à identifier les subventions de \ndécarbonation applicables à leurs offres.\n\nParticularité : combinaison de recherche documentaire interne (RAG sur \nSharePoint) et d'exploration web proactive pour dénicher des aides \nlocales souvent \"cachées\" (communiqués de presse, mairies, agences de \nl'eau, financements par agglomération).\n\nDémarche Tech-Watch & Benchmark :\nÉvaluation comparative entre approches \"Custom\" via API Python et \nplateformes Low-Code/No-Code (Gemini Enterprise, Copilot Studio, \nVertex AI) pour identifier le meilleur tool-to-user fit et le meilleur ROI.\n\nArchitecture Agentic :\n- Système multi-agents avec orchestrateur et agents spécialisés par \n  échelle territoriale (national, régional, local)\n- Connexion RAG native sur SharePoint pour la base documentaire interne\n- Recherche web augmentée par LLM (extraction de contexte propre, \n  synthèse, mise en forme)\n- Prompt engineering avancé pour cadrage strict des conditions d'éligibilité\n- Génération adaptative de tableaux de synthèses consolidés\n\nStack : Python · Google Gemini Enterprise (Google ADK) · Microsoft \nCopilot Studio · API Web Search (Tavily, Bing, DuckDuckGo) · SharePoint\n\nCode source : confidentiel (Engie).",
-    "tags": [
-      "GenAI",
-      "Agentic AI",
-      "Prompt Engineering",
-      "Benchmark",
-      "Web Fetch"
-    ],
-    "methodology": [
-      "Cadrage besoin métier",
-      "Prompt Engineering",
-      "POC/POV",
-      "Benchmarking",
-      "Collaboration Métier"
-    ],
-    "githubUrl": null,
-    "demoUrl": null,
-    "videoUrl": null,
-    "thumbnail": "/assets/projects/diademe-engie.svg",
     "featured": false
   },
   {
@@ -105,6 +82,31 @@
     "demoUrl": null,
     "videoUrl": null,
     "thumbnail": "/assets/projects/hackathon-credit-agricole.png",
+    "featured": false
+  },
+  {
+    "id": "diademe-stage-engie-nda",
+    "title": "Diademe — Stage Engie — Agentic AI",
+    "shortDescription": "Système Agentic de web fetch pour la veille de subventions de décarbonation. \nTech-watch et benchmark Custom vs. Low-Code (Gemini, Copilot Studio).",
+    "fullDescription": "Seconde mission pendant mon stage à l'AI Lab d'Engie. Conception \nd'un assistant conversationnel basé sur l'IA générative pour aider les \néquipes commerciales et projets à identifier les subventions de \ndécarbonation applicables à leurs offres.\n\nParticularité : combinaison de recherche documentaire interne (RAG sur \nSharePoint) et d'exploration web proactive pour dénicher des aides \nlocales souvent \"cachées\" (communiqués de presse, mairies, agences de \nl'eau, financements par agglomération).\n\nDémarche Tech-Watch & Benchmark :\nÉvaluation comparative entre approches \"Custom\" via API Python et \nplateformes Low-Code/No-Code (Gemini Enterprise, Copilot Studio, \nVertex AI) pour identifier le meilleur tool-to-user fit et le meilleur ROI.\n\nArchitecture Agentic :\n- Système multi-agents avec orchestrateur et agents spécialisés par \n  échelle territoriale (national, régional, local)\n- Connexion RAG native sur SharePoint pour la base documentaire interne\n- Recherche web augmentée par LLM (extraction de contexte propre, \n  synthèse, mise en forme)\n- Prompt engineering avancé pour cadrage strict des conditions d'éligibilité\n- Génération adaptative de tableaux de synthèses consolidés\n\nStack : Python · Google Gemini Enterprise (Google ADK) · Microsoft \nCopilot Studio · API Web Search (Tavily, Bing, DuckDuckGo) · SharePoint\n\nCode source : confidentiel (Engie).",
+    "tags": [
+      "GenAI",
+      "Agentic AI",
+      "Prompt Engineering",
+      "Benchmark",
+      "Web Fetch"
+    ],
+    "methodology": [
+      "Cadrage besoin métier",
+      "Prompt Engineering",
+      "POC/POV",
+      "Benchmarking",
+      "Collaboration Métier"
+    ],
+    "githubUrl": null,
+    "demoUrl": null,
+    "videoUrl": null,
+    "thumbnail": "/assets/projects/diademe-engie.svg",
     "featured": false
   },
   {
@@ -136,7 +138,7 @@
     "id": "selection-projets-academiques",
     "title": "Sélection de projets académiques",
     "shortDescription": "Sélection de projets data réalisés pendant le MSc IÉSEG : Deep \nLearning, Big Data, NLP, Time-Series, Recommandation.",
-    "fullDescription": "Au cours de mon MSc AI & Big Data Analytics for Business à l'IÉSEG, \nj'ai réalisé une vingtaine de projets data couvrant un large spectre \nde paradigmes. Sélection des plus formateurs :\n\n→ Deep Learning multi-architectures (météo + classification d'images)\n   Combinaison classification d'images + prévision de séries temporelles \n   avec mécanisme d'attention. Exploration structurée de CNN, LSTM, \n   GRU, Transfer Learning. Visualisation des activations (saliency maps).\n\n→ Big Data — Prédiction de satisfaction produit (e-commerce)\n   Modèles ML de prédiction des évaluations clients sur datasets à \n   échelle industrielle (PySpark, Spark MLlib, Databricks).\n\n→ Basetable bancaire pour analyse d'octroi de prêts\n   Construction d'une base structurée à partir d'historiques bancaires \n   pour modélisation de l'octroi de crédit. Indicateurs comportementaux \n   et de risque (RFM scoring, stabilité client / LOR, score risque).\n\n→ Système de recommandation\n   Filtrage collaboratif (SVD, similarité cosinus) + cross-validation \n   leave-one-out. Évaluation comparative des approches.\n\n→ Time-Series Forecasting\n   Modélisation classique (ARIMA, ETS, TBATS) vs neuronale (LSTM, NNAR). \n   Comparaison via AIC/BIC, tests de Ljung-Box.\n\nCode source : projets académiques, certains incluant du code en équipe et ou\nnon publiés. Détails techniques disponibles sur demande.",
+    "fullDescription": "Au cours de mon MSc AI & Big Data Analytics for Business à l'IÉSEG, \nj'ai réalisé une vingtaine de projets data couvrant un large spectre \nde paradigmes. \n Voici la sélection des plus formateurs :\n\n→ Deep Learning multi-architectures (météo + classification d'images)\n   Combinaison classification d'images + prévision de séries temporelles \n   avec mécanisme d'attention. Exploration structurée de CNN, LSTM, \n   GRU, Transfer Learning. Visualisation des activations (saliency maps).\n\n→ Big Data — Prédiction de satisfaction produit (e-commerce)\n   Modèles ML de prédiction des évaluations clients sur datasets à \n   échelle industrielle (PySpark, Spark MLlib, Databricks).\n\n→ Basetable bancaire pour analyse d'octroi de prêts\n   Construction d'une base structurée à partir d'historiques bancaires \n   pour modélisation de l'octroi de crédit. Indicateurs comportementaux \n   et de risque (RFM scoring, stabilité client / LOR, score risque).\n\n→ Système de recommandation\n   Filtrage collaboratif (SVD, similarité cosinus) + cross-validation \n   leave-one-out. Évaluation comparative des approches.\n\n→ Time-Series Forecasting\n   Modélisation classique (ARIMA, ETS, TBATS) vs neuronale (LSTM, NNAR). \n   Comparaison via AIC/BIC, tests de Ljung-Box.\n\nCode source : projets académiques, certains incluant du code en équipe et ou\nnon publiés. Détails techniques disponibles sur demande.",
     "tags": [
       "Deep learning",
       "Big Data",
@@ -158,7 +160,7 @@
     "githubUrl": "https://github.com/PGing-s-eer",
     "demoUrl": null,
     "videoUrl": null,
-    "thumbnail": "/assets/projects/selection-projets-academiques.png",
+    "thumbnail": "/assets/projects/selection-projets-academiques.svg",
     "featured": false
   }
 ]

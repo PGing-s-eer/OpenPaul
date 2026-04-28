@@ -42,14 +42,14 @@ const STATS = [
     hint: 'Total affiché sur la section DataCamp et utilisé par le KPI « XP DataCamp ».',
   },
   {
+    key: 'trainingHours',
+    label: 'Heures de formation',
+    hint: 'Nombre total d\'heures de formation sur la plateforme DataCamp.',
+  },
+  {
     key: 'coursesCompleted',
     label: 'Cours complétés',
     hint: 'Nombre de cours terminés sur la plateforme.',
-  },
-  {
-    key: 'skillAssessmentsPassed',
-    label: 'Évaluations réussies',
-    hint: 'Skill assessments / certifications internes DataCamp.',
   },
   {
     key: 'careerTracksCompleted',

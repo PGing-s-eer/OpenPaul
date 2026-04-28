@@ -55,7 +55,7 @@ function DomainBars({ domains }) {
 }
 
 export function DataCampSection() {
-  const { totalXp, coursesCompleted, skillAssessmentsPassed, careerTracksCompleted, domains } =
+  const { totalXp, coursesCompleted, trainingHours, careerTracksCompleted, domains } =
     useRepoDatacamp()
 
   return (
@@ -66,18 +66,18 @@ export function DataCampSection() {
       <div className="mx-auto max-w-6xl">
         <h2 className="font-display text-xl font-semibold text-text md:text-2xl">DataCamp</h2>
         <p className="mt-3 max-w-2xl text-muted">
-          Synthèse de l’activité sur la plateforme : XP cumulée, volumes de parcours complétés et
-          répartition estimée par domaine (à ajuster selon ton profil réel).
+          Synthèse de l’activité sur la plateforme : XP cumulée,nombre d'heures de formation, volumes de parcours complétés et
+          répartition estimée par domaine.
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
           <StatTile label="XP total" value={formatInt(totalXp)} delay={0} />
-          <StatTile label="Cours complétés" value={formatInt(coursesCompleted)} delay={0.05} />
           <StatTile
-            label="Évaluations réussies"
-            value={formatInt(skillAssessmentsPassed)}
-            delay={0.1}
+            label="Heures de formation"
+            value={formatInt(trainingHours)}
+            delay={0.05}
           />
+          <StatTile label="Cours complétés" value={formatInt(coursesCompleted)} delay={0.1} />
           <StatTile
             label="Parcours carrière"
             value={formatInt(careerTracksCompleted)}

@@ -34,7 +34,7 @@ export function normalizeDatacampForStorage(raw) {
   return {
     totalXp: nonNegInt(raw.totalXp),
     coursesCompleted: nonNegInt(raw.coursesCompleted),
-    skillAssessmentsPassed: nonNegInt(raw.skillAssessmentsPassed),
+    trainingHours: nonNegInt(raw.trainingHours),
     careerTracksCompleted: nonNegInt(raw.careerTracksCompleted),
     domains,
   }

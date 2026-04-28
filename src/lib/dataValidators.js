@@ -100,7 +100,7 @@ function validateDatacampData(parsed) {
   if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
     return { ok: false, error: 'datacamp.json doit être un objet.' }
   }
-  const nums = ['totalXp', 'coursesCompleted', 'skillAssessmentsPassed', 'careerTracksCompleted']
+  const nums = ['totalXp', 'coursesCompleted', 'trainingHours', 'careerTracksCompleted']
   for (const k of nums) {
     if (typeof parsed[k] !== 'number' || Number.isNaN(parsed[k])) {
       return { ok: false, error: `datacamp : « ${k} » doit être un nombre.` }

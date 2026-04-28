@@ -1,12 +1,13 @@
 {
   "totalXp": 171546,
+  "trainingHours": 119.5,
   "coursesCompleted": 36,
-  "skillAssessmentsPassed": 8,
   "careerTracksCompleted": 1,
   "domains": [
-    { "name": "Python", "progress": 88 },
-    { "name": "SQL", "progress": 72 },
-    { "name": "Machine Learning", "progress": 65 },
-    { "name": "Statistics", "progress": 70 }
+    { "name": "Data Engineering", "progress": 75  },
+    { "name": "Machine Learning", "progress": 85 },
+    { "name": "Deep Learning", "progress": 40 },
+    { "name": "Data Analysis & Viz", "progress": 85 },
+    { "name": "MLOps/Deployment", "progress": 60 }
   ]
 }
