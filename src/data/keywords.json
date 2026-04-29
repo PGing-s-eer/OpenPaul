@@ -385,5 +385,131 @@
     "note": "Notion de statistique, qualité de donnée. Les outliers peuvent biaiser les stats, casser les modèles. Ils peuvent etre une source de signal comme de bruit.",
     "analogy": "Un paiement de 50 000€ dans un compte qui dépense 50€/jour. C'est pas forcément une erreur mais c'est peut-être une fraude à étudier",
     "subcategory": "Preprocessing"
+  },
+  {
+    "id": "xgboost",
+    "name": "XGBoost",
+    "category": "Algorithm",
+    "dateAdded": "2024-12-17",
+    "note": "Modèle de machine learning de la famille des arbres. XGBoost a comme particularité des abres en séquence apprennant des fautes du précédent.",
+    "analogy": "Un correcteur après l'autre on fini par compiler les erreurs, chaque correcteur est moyen mais ensemble ils sont imbatables",
+    "subcategory": "Ensemble learning"
+  },
+  {
+    "id": "shap",
+    "name": "SHAP",
+    "category": "Concept",
+    "dateAdded": "2025-01-26",
+    "note": "Explique une prédiction spécifique en regardant l'impact des features. Il permet aussi au global d'observer quels sont les features importantes.",
+    "analogy": "Quelle feature a contribué de combien dans cette prédiction précise.",
+    "subcategory": "Interpretabilité"
+  },
+  {
+    "id": "ressampling",
+    "name": "Resampling",
+    "category": "Methodology",
+    "dateAdded": "2025-03-11",
+    "note": "Rééquilibrage de classes déséquilibrées. permet une estimation plus stable des performances et parfois une amélioration de l'apprentissage du modèle sur les patternes associés à une classe extremement rare",
+    "analogy": "Evite la triche d'un modèle lorsqu'il prédit la classe majoritaire constamment. Le ressampling remet les plateaux à un niveau plus acceptable.",
+    "subcategory": "Classification"
+  },
+  {
+    "id": "gridsearchcv",
+    "name": "GridSearchCV",
+    "category": "Methodology",
+    "dateAdded": "2024-12-17",
+    "note": "Trouver automatiquement la meilleure combinaison d'hyperparamètres pour un modèle en lui donnant une grille de valeurs à tester. En essayant toute les combinaisont évaluées par cross-validation on retourne le meilleur compromis.",
+    "analogy": "Tout essayer pour trouver le meilleur cas.",
+    "subcategory": "Hyperparameter-tuning"
+  },
+  {
+    "id": "lasso",
+    "name": "Lasso",
+    "category": "Methodology",
+    "dateAdded": "2025-02-19",
+    "note": "L1 ! \nLasso c'est une régression linéaire avec une pénalité sur les variables n'apportant pas beaucoup en clouant leur coefficient à 0. (Elimination).",
+    "analogy": "Feature selection automatique, coefficient à 0.",
+    "subcategory": "Régularisation"
+  },
+  {
+    "id": "f-score",
+    "name": "F-Score",
+    "category": "Methodology",
+    "dateAdded": "2024-09-10",
+    "note": "Métrique faisant le rapport entre précision et recall.  F1 (β=1) : équilibre parfait entre precision et recall\nF2 (β=2) : favorise le recall (utile en médical par ex.)\nF0.5 (β=0.5) : favorise la precision",
+    "analogy": "Ultra IMPORTANT quand déséquilibre de classe .",
+    "subcategory": "Métrique"
+  },
+  {
+    "id": "recall",
+    "name": "Recall",
+    "category": "Methodology",
+    "dateAdded": "2024-09-10",
+    "note": "parmi tous les vrais positifs qui existent, combien le modèle en a détectés ? | TP / (TP + FN) — les vrais positifs sur tous les positifs réels.",
+    "analogy": "Un filet de pêche à mailles très serrées. Il ramène tout, même ce qu'on voulait pas. Rien ne passe à travers.  Recall parfait, précision nulle",
+    "subcategory": "Métrique"
+  },
+  {
+    "id": "precision",
+    "name": "Precision",
+    "category": "Concept",
+    "dateAdded": "2024-09-10",
+    "note": "Pparmi tout ce que le modèle a prédit positif, combien l'étaient vraiment ? | TP / (TP + FP) - les vrais positifs sur tout ce que le modèle a prédit positif.",
+    "analogy": "Une alarme qui se déclenche rarement. Mais quand elle sonne, c'est toujours vrai.",
+    "subcategory": "Métrique"
+  },
+  {
+    "id": "smote",
+    "name": "SMOTE",
+    "category": "Algorithm",
+    "dateAdded": "2025-03-11",
+    "note": "Technique d'oversampling en créant de manières synthetique des observations de classe minoritaire en interpolant les voisins proches.\nIl prend un point minoritaire, regarde ses k plus proches voisins dans la même classe, et crée un nouveau point quelque part sur le segment entre les deux",
+    "analogy": "Création d'extrapolation raisonable d'observation de classe minoritaire. Cloner en croisant les gènes.",
+    "subcategory": "Resampling"
+  },
+  {
+    "id": "scale-pos-weight",
+    "name": "scale_pos_weight",
+    "category": "Algorithm",
+    "dateAdded": "2025-03-11",
+    "note": "Not a ressampling but a rebalancing by giving more weight to minor observations during training. Peut etre combiné avec SMOTE",
+    "analogy": "Un prof qui note plus sévèrement les erreurs sur le chapitre raté pour que l'élève s'y concentre",
+    "subcategory": "rebalancing"
+  },
+  {
+    "id": "lime",
+    "name": "LIME",
+    "category": "Algorithm",
+    "dateAdded": "2025-02-10",
+    "note": "Permet l'interpretation et explicabilité d'une prédiction d'un modèle, de la meme famille que SHAP mais agis différemment. Génère pleins de pointws artificiels avec de légers changement, et regarde comment le modèle prédit par rapport à ces points. puis entraine un RL sur les prédictions du modèle afin de montrer quels features sont importantes dans sa prédiction.",
+    "analogy": "Mimer le comportement d'un modèle boite noir de manière approximative avec un modèle plus simple et interprétable",
+    "subcategory": "Interprétabilité"
+  },
+  {
+    "id": "naive-bayes",
+    "name": "Naive Bayes",
+    "category": "Algorithm",
+    "dateAdded": "2025-04-07",
+    "note": "Approche simplistique prenant partie que chaque variable est indépendante l'une de l'autre. Ultra rapide, bon sur classification de texte",
+    "analogy": "la probabilité que ce mail soit un spam, sachant qu'il contient le mot \"gratuit\", \"urgent\" et \"cliquez ici\"",
+    "subcategory": "Classification"
+  },
+  {
+    "id": "cnn",
+    "name": "CNN",
+    "category": "Algorithm",
+    "dateAdded": "2026-03-02",
+    "note": "Convolutional Neural Network. Réseau de neurones créer à la base pour les images mais fonctionne aussi pour un tas d'autre utilisation. \nPrincipe clé : applique des filtres qui balaient l'image par zone pour détécter des paternes locaux. Exploite la structure spatiale des données en donnant un sens a un pixel par rapport a ses voisins.",
+    "analogy": "La vision humaine, détéction élément par élément constituant un tout.",
+    "subcategory": "Deep Learning"
+  },
+  {
+    "id": "transformers",
+    "name": "Transformers",
+    "category": "Algorithm",
+    "dateAdded": "2026-03-16",
+    "note": "Remplace les RNN/LSTM, et révolutionne avecr \"Attention is All You Need\". Regarde tout les mots en meme temps + mécanisme d'attention",
+    "analogy": "Saisie la globalité à partir des relations entre chaque localité.",
+    "subcategory": "Deep Learning / NLP"
   }
 ]
