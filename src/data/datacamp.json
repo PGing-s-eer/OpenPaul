@@ -1,13 +1,28 @@
 {
-  "totalXp": 171546,
-  "trainingHours": 119.5,
-  "coursesCompleted": 36,
-  "careerTracksCompleted": 1,
+  "totalXp": 193546,
+  "coursesCompleted": 41,
+  "trainingHours": 136.5,
+  "careerTracksCompleted": 3,
   "domains": [
-    { "name": "Data Engineering", "progress": 75  },
-    { "name": "Machine Learning", "progress": 85 },
-    { "name": "Deep Learning", "progress": 40 },
-    { "name": "Data Analysis & Viz", "progress": 85 },
-    { "name": "MLOps/Deployment", "progress": 60 }
+    {
+      "name": "Data Engineering",
+      "progress": 75
+    },
+    {
+      "name": "Machine Learning",
+      "progress": 85
+    },
+    {
+      "name": "Deep Learning",
+      "progress": 40
+    },
+    {
+      "name": "Data Analysis & Viz",
+      "progress": 80
+    },
+    {
+      "name": "MLOps/Deployment",
+      "progress": 60
+    }
   ]
 }

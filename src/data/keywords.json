@@ -511,5 +511,177 @@
     "note": "Remplace les RNN/LSTM, et révolutionne avecr \"Attention is All You Need\". Regarde tout les mots en meme temps + mécanisme d'attention",
     "analogy": "Saisie la globalité à partir des relations entre chaque localité.",
     "subcategory": "Deep Learning / NLP"
-  }
-]
+  },
+  
+    {
+      "id": "lemmatization",
+      "name": "Lemmatization",
+      "category": "Methodology",
+      "subcategory": "NLP",
+      "dateAdded": "2025-03-8",
+      "note": "Ramène 'mangerais' à 'manger' grâce à une base dictionnaire, pas une hache comme Stemming. Prétraitements standard pour NLP avant classification.",
+      "analogy": "Dico vs Hache : Dico = Lemmatization (précis), Hache = Stemming (brut)."
+    },
+    {
+      "id": "tokenisation",
+      "name": "Tokenisation",
+      "category": "Concept",
+      "subcategory": "NLP",
+      "dateAdded": "2025-03-8",
+      "note": "Découpe une chaîne de caractères en unités atomiques (mots ou sous-mots) pour la consommation machine.  Définit le vocabulaire et la granularité des données (mots, sous-mots).",
+      "analogy": "Couper une bûche de Noël : on transforme un bloc unique en tranches comestibles."
+    },
+    {
+      "id": "ner",
+      "name": "NER",
+      "category": "Concept",
+      "subcategory": "Traitement du langage",
+      "dateAdded": "2025-03-12",
+      "note": "Reconnaissance et classification d'entités nommées (personnes, organisations, lieux, dates) dans un texte. Algorithme NLP qui délimite les spans et assigne des labels pré-définis.",
+      "analogy": "Un tampon automatique qui surligne 'Céline' → 'Personne', 'Paris' → 'Ville', '2024' → 'Date'."
+    },
+    {
+      "id": "stopwords",
+      "name": "Stopwords",
+      "category": "Concept",
+      "subcategory": "Prétraitement",
+      "dateAdded": "2025-03-8",
+      "note": "Mots de liaison et articles (le, la, et, de) sans valeur sémantique forte à éjecter du corpus. On les supprime pour réduire la dimensionnalité de l'espace vectoriel et accélérer l'entraînement. Standard indispensable en NLP avant la tokenisation.",
+      "analogy": "Tamis : tu gardes la farine (mots-clés) et tu jètes la paille (stopwords)."
+    },
+    {
+      "id": "stemming",
+      "name": "Stemming",
+      "category": "Methodology",
+      "subcategory": "NLP",
+      "dateAdded": "2025-03-8",
+      "note": "Réduit les mots à leur racine morphologique par coupure de suffixes (éducatif, éducations → éducat). Méthode rapide mais imparfaite",
+      "analogy": "Couper les feuilles d'un arbre pour retrouver le tronc commun."
+    },
+    {
+      "id": "bow",
+      "name": "BoW",
+      "category": "Methodology",
+      "subcategory": "Vectorisation",
+      "dateAdded": "2025-03-10",
+      "note": "Technique de vectorisation textuelle qui transforme un texte en vecteur numérique. Compte la fréquence de chaque mot, l'ordre syntaxique est ignoré. Transforme texte en format numérique pour la machine",
+      "analogy": "Image mentale : Un sac en plastique rempli de billes, on ne regarde que le nombre total par couleur."
+    },
+    {
+      "id": "qnli",
+      "name": "QNLI",
+      "category": "Concept",
+      "subcategory": "NLP",
+      "dateAdded": "2026-05-19",
+      "note": "QNLI (Question natural language inference) Transforme les questions en prédiction NLI (entailment/contradiction). C'est le standard pour évaluer la compréhension sémantique des modèles comme BERT.",
+      "analogy": "Q+NLI = Question + Natural Language Inference = Vérification de logique sur une question."
+    },
+    {
+      "id": "zero-shot-classification",
+      "name": "Zero shot classification",
+      "category": "Methodology",
+      "subcategory": "Embeddings",
+      "dateAdded": "2026-03-10",
+      "note": "Classification sans exemples étiquetés pour la tâche cible. Le modèle exploite la sémantique (embeddings texte/image) pour mapper une entrée inconnue à un concept familier.",
+      "analogy": "Concept clé : Zéro données = Tout le modèle vient de la base de connaissances externe (embeddings)."
+    },
+    {
+      "id": "glove",
+      "name": "GloVe",
+      "category": "Algorithm",
+      "subcategory": "Embeddings",
+      "dateAdded": "2025-03-15",
+      "note": "Approche hybride qui combine statistiques globales de co-occurrence et modèles locaux d'appariement. Factorise une matrice pour produire des vecteurs sémantiques robustes sans entraînement profond.",
+      "analogy": "L'annuaire d'amis : ceux qui t'appellent souvent (local) et les stars suivies par tous (global)."
+    },
+    {
+      "id": "cassandra",
+      "name": "Cassandra",
+      "category": "Outil",
+      "subcategory": "NoSQL",
+      "dateAdded": "2026-02-28",
+      "note": "Base de données NoSQL distribuée type BigTable (Apache Cassandra). Scale Horizontal, Sacrifie consistency pour garantir la disponibilité et la tolérance aux partitions.",
+      "analogy": "ACID vs BASE : Cassandra utilise le modèle BASE (Base Availability, Stability, Durability) plutôt qu'ACID."
+    },
+    {
+      "id": "pinecone-db",
+      "name": "Pinecone DB",
+      "category": "Outil",
+      "subcategory": "Vector Database",
+      "dateAdded": "2026-03-05",
+      "note": "Base de données spécialisée pour stocker des vecteurs (embeddings). SaaS complet, gère l'indexation et le scale sans configurer de machine.",
+      "analogy": "Une bibliothèque où les livres sont rangés par idées partagées (sémantique), pas par les rayons physiques."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "Outil",
+      "subcategory": "Fork VS Code",
+      "dateAdded": "2026-03-15",
+      "note": "Éditeur de code forké de VS Code intégrant des LLMs nativement. Indexe tout ton projet pour comprendre le contexte global avant de proposer du code. ",
+      "analogy": "Copain qui connaît le terrain : tu poses une question vague, il te donne la réponse précise."
+    },
+    {
+      "id": "databricks-connect",
+      "name": "Databricks Connect",
+      "category": "Outil",
+      "subcategory": "Développement Local",
+      "dateAdded": "2025-11-14",
+      "note": "C'est le client officiel qui permet de lancer du code directement sur le cluster Databricks. Parfait pour coder en IDE et compute en distribué.",
+      "analogy": "Image mentale : Imagine un tuyau d'eau qui relie ton robinet (local) au réservoir de data (cloud) sans vider le réservoir."
+    },
+    {
+      "id": "copilot-studio",
+      "name": "Copilot Studio",
+      "category": "Outil",
+      "subcategory": "Agentique No/Low Code",
+      "dateAdded": "2026-01-05",
+      "note": "Plateforme low-code Microsoft pour concevoir des agents IA et applications métiers personnalisés. Outil de production pour automatiser des tâches complexes sans écrire de code pur.",
+      "analogy": "Un super-marché de solutions IA : tu achètes l'agent standard, mais tu l'habilles avec tes propres règles et ton propre stock de données."
+    },
+    {
+      "id": "spec-kit",
+      "name": "Spec Kit",
+      "category": "Framework",
+      "subcategory": "Agentic workflow",
+      "dateAdded": "2026-03-16",
+      "note": "Framework ou kit de développement destiné à optimiser le travail avec des outils d'IA par la spécification des règles et tâches d’un projet avant l’implémentation.",
+      "analogy": "Spécifications = RÈGLES, Kit = OUTILS. Pas de magie, juste du code standardisé."
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "category": "Outil",
+      "subcategory": "Aggrégateur LLM",
+      "dateAdded": "2026-05-18",
+      "note": "Plateforme d'agrégation qui centralise l'accès à des centaines de modèles LLM de différents fournisseurs. Un seul endpoint API standard permet d'interroger OpenAI, Anthropic, Mistral ou des modèles open-source sans changer de code. Optimise les coûts et permet de switcher rapidement de modèle pour tester les performances.",
+      "analogy": "Le multiprise universel pour les IA : comme une prise qui s'adapte à n'importe quel appareil sans fil."
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "category": "Outil",
+      "subcategory": "Local Deployment",
+      "dateAdded": "2024-12-25",
+      "note": "Runner open-source pour déployer des LLM localement sur tes propres devides",
+      "analogy": "Mnemonic: O**N**ly **L**ocal **M**odels."
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "category": "Framework",
+      "subcategory": "Orchestration LLM",
+      "dateAdded": "2026-05-22",
+      "note": "Framework Python pour orchestrer les flux vers des LLM et les outils externes. Assemble des composants pour créer des applications IA sans recoder les API. LangChain : LangSmith - LangGraph - LangServ",
+      "analogy": "L'adaptateur universel : permet de brancher n'importe quel appareil (LLM) sur n'importe quelle prise (API) via un standard compatible."
+    },
+    {
+      "id": "chroma-db",
+      "name": "Chroma DB",
+      "category": "Outil",
+      "subcategory": "Vector Database",
+      "dateAdded": "2026-03-21",
+      "note": "Vector DB optimisé pour les embeddings et les recherches par similarité. Utilisé en RAG pour stocker les connaissances des modèles LLM pour requetes rapides",
+      "analogy": "Une carte de chaleur qui montre les voisins les plus proches dans l'espace des données."
+    }
+  ]
