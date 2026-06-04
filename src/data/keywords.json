@@ -683,5 +683,113 @@
       "dateAdded": "2026-03-21",
       "note": "Vector DB optimisé pour les embeddings et les recherches par similarité. Utilisé en RAG pour stocker les connaissances des modèles LLM pour requetes rapides",
       "analogy": "Une carte de chaleur qui montre les voisins les plus proches dans l'espace des données."
-    }
+    },
+    {
+    "id": "gru",
+    "name": "GRU",
+    "category": "Algorithm",
+    "subcategory": "RNN",
+    "dateAdded": "2025-04-29",
+    "note": "Gated Recurrent Unit. Réseau neuronal récurrent (RNN) avec deux portes (Reset, Update) pour gérer la mémoire des séquences. Plus léger que LSTM, réduit les paramètres et accélère l'entraînement. On fusionne les deux états (Ct et ht) de LSTM Contient les inconvénients des RNN basiques (gradient qui disparaît) avec moins de complexité.",
+    "analogy": "Bloc-notes : tu effaces proprement le contenu inutile (Reset) et réécris le sommaire (Update), pas besoin de plusieurs feuilles."
+  },
+  {
+    "id": "lstm",
+    "name": "LSTM",
+    "category": "Algorithm",
+    "subcategory": "RNN",
+    "dateAdded": "2025-04-29",
+    "note": "Long Short-Term Memory = une RNN avec portes (forget, input, output) qui contrôlent le flux d'information. Résout le problème du gradient vanishing. Permet de mémoriser des dépendances longues.",
+    "analogy": "Une mémoire à court terme (RNN classique) vs une mémoire à long terme avec portes de contrôle."
+  },
+  {
+    "id": "stepwise",
+    "name": "Stepwise",
+    "category": "Methodology",
+    "subcategory": "Feature selection",
+    "dateAdded": "2024-12-10",
+    "note": "Algorithme de sélection de variables par ajout/suppression itérative basé sur des critères statistiques (AIC, p-value). Risqué : corrélé à des données biaisées, instable. Oublie les interactions entre features.",
+    "analogy": "Un jury qui élimine les témoins au fur et à mesure selon leur témoignage."
+  },
+  {
+    "id": "stationarity",
+    "name": "Stationarity",
+    "category": "Concept",
+    "subcategory": "Timeseries",
+    "dateAdded": "2025-04-15",
+    "note": "Série temporelle dont la moyenne, la variance et l'autocovariance ne dépendent pas du temps. Indispensable pour valider l'usage des modèles ARIMA ou Box-Jenkins. Si la distribution change, il faut différentier ou transformer les données. Moyenne doit rester a peu près constante.",
+    "analogy": "Stationnaire = Stats Stable (S). Si la moyenne bouge, c'est fini."
+  },
+  {
+    "id": "arima",
+    "name": "ARIMA",
+    "category": "Methodology",
+    "subcategory": "Forecasting",
+    "dateAdded": "2025-04-15",
+    "note": "Modele statistique pour predire l'avenir d'une serie temporelle. AutoRegressive Integrated MA (p, d, q). AR = Passé de Yt, I = Stationarité, MA = Erreurs Passées. A utiliser quand pas de saisonalité forte, series longues, ou de corrélations temporelles complexes. Prérequis de stationnarité.",
+    "analogy": "A.R.I.M.A : A(ut) + R(e) + I(nteg) + M(oy) + A(ve) -> Auto-regression, Integration, Moving Average."
+  },
+  {
+    "id": "ets",
+    "name": "ETS",
+    "category": "Methodology",
+    "subcategory": "Forecasting",
+    "dateAdded": "2025-04-12",
+    "note": "Modélisation de série temporelle via décomposition Erreur-Tendance-Saisonalité. U3 composantes (None/ Additive / Multiplicative) Méthode classique de prévision sans besoin de calibration complexe.\nError Trend Seasonality",
+    "analogy": "Mnémonique: ETS = Error + Trend + Seasonal (le célèbre modèle de Box, mais plus simple que ARIMA)."
+  },
+  {
+    "id": "bert",
+    "name": "BERT",
+    "category": "Algorithm",
+    "subcategory": "Transformer",
+    "dateAdded": "2025-03-01",
+    "note": "Modèle de langage pré-entraîné qui lit gauche et droite simultanément pour comprendre le contexte. Fine-tuning requis sur tâche spécifique. Architecture Transformer multi-couche pour embeddings contextuels.\nDistilBERT = BERT compressé via distillation pour l'inférence ultra-rapide. RoBERTa = BERT re-entraîné sur plus de données et temps pour l'accuracy maximale. ",
+    "analogy": "B = Bidirectional (gauche/droite) + E = Encoder + RT = Transformer, \"Bi-Encode-Représenter\"."
+  },
+  {
+    "id": "word2vec",
+    "name": "Word2Vec",
+    "category": "Algorithm",
+    "subcategory": "Embeddings",
+    "dateAdded": "2025-06-03",
+    "note": "Modèle d'embedding qui transforme chaque token en vecteur dense. Capture les relations sémantiques contextuelles via la prédiction du voisinage (Skip-gram ou CBOW). Remplace l'encodage one-hot pour permettre des calculs de similarité vectorielle en NLP.",
+    "analogy": "Dictionnaire contextuel : Comprendre un mot inconnu par les mots qui l'entourent, comme en langage oral."
+  },
+  {
+    "id": "tf-idf",
+    "name": "TF-IDF",
+    "category": "Algorithm",
+    "subcategory": "Feature Extraction",
+    "dateAdded": "2025-06-03",
+    "note": "TF-IDF = Term Frequency * Inverse Document Frequency. Mesure l'importance d'un terme dans un document. Terme fréquent dans un doc = score élevé. Terme rare mais dans peu de docs = score encore plus élevé.",
+    "analogy": "Un livre où un mot revient beaucoup mais dans tous les livres de la bibliothèque = moins intéressant. Un mot rare mais présent dans ton livre = très pertinent."
+  },
+  {
+    "id": "hugging-face",
+    "name": "Hugging Face",
+    "category": "Outil",
+    "subcategory": "Plateforme",
+    "dateAdded": "2025-03-29",
+    "note": "Plateforme open-source centrale pour héberger, partager et déployer des modèles ML, principalement via la librairie Transformers. Permet de standardiser les formats d'entrée/sortie et les pipelines d'inference sans reconstruire de zéro. Agit comme un hub communautaire pour l'IA au sens large",
+    "analogy": "Une bibliothèque publique d'IA : tu empruntes des modèles (livres) sans te les approprier."
+  },
+  {
+    "id": "spss",
+    "name": "SPSS",
+    "category": "Outil",
+    "subcategory": "Analyse statistique",
+    "dateAdded": "2024-09-01",
+    "note": "Logiciel IBM d'analyse statistique. Calcule les tests sans écrire de code, idéal pour les non-développeurs. Legacy dans le data science moderne, mais dominant en études sociales et AB Testing de manière générale.",
+    "analogy": "Image mentale : Un vieux bureau d'ordinateur Windows 98 avec des icônes bleues et beaucoup de menus déroulants."
+  },
+  {
+    "id": "lightgbm",
+    "name": "LightGBM",
+    "category": "Library",
+    "subcategory": "Gradient Boosting",
+    "dateAdded": "2025-05-09",
+    "note": "Framework open-source pour le Gradient Boosting optimisé. Utilise une croissance Leaf-wise des arbres. Standard pour les compétitions Kaggle pour des données massives",
+    "analogy": "Light = Lumière = Vitesse. GBM = Gradient Boosting Machine. -> LightGBM."
+  }
   ]
