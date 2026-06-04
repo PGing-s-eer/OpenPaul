@@ -597,7 +597,7 @@
     {
       "id": "cassandra",
       "name": "Cassandra",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "NoSQL",
       "dateAdded": "2026-02-28",
       "note": "Base de données NoSQL distribuée type BigTable (Apache Cassandra). Scale Horizontal, Sacrifie consistency pour garantir la disponibilité et la tolérance aux partitions.",
@@ -606,7 +606,7 @@
     {
       "id": "pinecone-db",
       "name": "Pinecone DB",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Vector Database",
       "dateAdded": "2026-03-05",
       "note": "Base de données spécialisée pour stocker des vecteurs (embeddings). SaaS complet, gère l'indexation et le scale sans configurer de machine.",
@@ -615,7 +615,7 @@
     {
       "id": "cursor",
       "name": "Cursor",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Fork VS Code",
       "dateAdded": "2026-03-15",
       "note": "Éditeur de code forké de VS Code intégrant des LLMs nativement. Indexe tout ton projet pour comprendre le contexte global avant de proposer du code. ",
@@ -624,7 +624,7 @@
     {
       "id": "databricks-connect",
       "name": "Databricks Connect",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Développement Local",
       "dateAdded": "2025-11-14",
       "note": "C'est le client officiel qui permet de lancer du code directement sur le cluster Databricks. Parfait pour coder en IDE et compute en distribué.",
@@ -633,7 +633,7 @@
     {
       "id": "copilot-studio",
       "name": "Copilot Studio",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Agentique No/Low Code",
       "dateAdded": "2026-01-05",
       "note": "Plateforme low-code Microsoft pour concevoir des agents IA et applications métiers personnalisés. Outil de production pour automatiser des tâches complexes sans écrire de code pur.",
@@ -651,7 +651,7 @@
     {
       "id": "openrouter",
       "name": "OpenRouter",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Aggrégateur LLM",
       "dateAdded": "2026-05-18",
       "note": "Plateforme d'agrégation qui centralise l'accès à des centaines de modèles LLM de différents fournisseurs. Un seul endpoint API standard permet d'interroger OpenAI, Anthropic, Mistral ou des modèles open-source sans changer de code. Optimise les coûts et permet de switcher rapidement de modèle pour tester les performances.",
@@ -660,7 +660,7 @@
     {
       "id": "ollama",
       "name": "Ollama",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Local Deployment",
       "dateAdded": "2024-12-25",
       "note": "Runner open-source pour déployer des LLM localement sur tes propres devides",
@@ -678,7 +678,7 @@
     {
       "id": "chroma-db",
       "name": "Chroma DB",
-      "category": "Outil",
+      "category": "Tool",
       "subcategory": "Vector Database",
       "dateAdded": "2026-03-21",
       "note": "Vector DB optimisé pour les embeddings et les recherches par similarité. Utilisé en RAG pour stocker les connaissances des modèles LLM pour requetes rapides",
@@ -768,7 +768,7 @@
   {
     "id": "hugging-face",
     "name": "Hugging Face",
-    "category": "Outil",
+    "category": "Tool",
     "subcategory": "Plateforme",
     "dateAdded": "2025-03-29",
     "note": "Plateforme open-source centrale pour héberger, partager et déployer des modèles ML, principalement via la librairie Transformers. Permet de standardiser les formats d'entrée/sortie et les pipelines d'inference sans reconstruire de zéro. Agit comme un hub communautaire pour l'IA au sens large",
@@ -777,7 +777,7 @@
   {
     "id": "spss",
     "name": "SPSS",
-    "category": "Outil",
+    "category": "Tool",
     "subcategory": "Analyse statistique",
     "dateAdded": "2024-09-01",
     "note": "Logiciel IBM d'analyse statistique. Calcule les tests sans écrire de code, idéal pour les non-développeurs. Legacy dans le data science moderne, mais dominant en études sociales et AB Testing de manière générale.",
