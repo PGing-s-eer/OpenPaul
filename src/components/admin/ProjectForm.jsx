@@ -8,6 +8,14 @@ function parseTagLines(text) {
     .filter(Boolean)
 }
 
+/** Les URLs d'images peuvent contenir des virgules : on découpe par ligne uniquement. */
+function parseImageLines(text) {
+  return text
+    .split(/\n+/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+}
+
 function draftFromInitial(initial) {
   if (initial) {
     return {
@@ -20,6 +28,7 @@ function draftFromInitial(initial) {
       demoUrl: initial.demoUrl == null ? '' : String(initial.demoUrl),
       videoUrl: initial.videoUrl == null ? '' : String(initial.videoUrl),
       thumbnail: initial.thumbnail == null ? '' : String(initial.thumbnail),
+      imagesText: Array.isArray(initial.images) ? initial.images.join('\n') : '',
       featured: Boolean(initial.featured),
     }
   }
@@ -33,6 +42,7 @@ function draftFromInitial(initial) {
     demoUrl: '',
     videoUrl: '',
     thumbnail: '',
+    imagesText: '',
     featured: false,
   }
 }
@@ -68,6 +78,7 @@ export function ProjectForm({ initial, onSubmit, onCancel }) {
     }
     const tags = parseTagLines(draft.tagsText)
     const methodology = parseTagLines(draft.methodologyText)
+    const images = parseImageLines(draft.imagesText)
     onSubmit({
       title,
       shortDescription: draft.shortDescription.trim(),
@@ -78,6 +89,7 @@ export function ProjectForm({ initial, onSubmit, onCancel }) {
       demoUrl: urlOrNull(draft.demoUrl),
       videoUrl: urlOrNull(draft.videoUrl),
       thumbnail: urlOrNull(draft.thumbnail),
+      images,
       featured: draft.featured,
     })
   }
@@ -169,7 +181,9 @@ export function ProjectForm({ initial, onSubmit, onCancel }) {
           />
         </div>
         <div>
-          <label className="font-display text-xs tracking-wide text-muted uppercase">Image (URL)</label>
+          <label className="font-display text-xs tracking-wide text-muted uppercase">
+            Image de couverture (URL)
+          </label>
           <input
             value={draft.thumbnail}
             onChange={(e) => handleChange('thumbnail', e.target.value)}
@@ -177,6 +191,22 @@ export function ProjectForm({ initial, onSubmit, onCancel }) {
             className="font-body mt-1 w-full rounded-md border border-white/12 bg-bg px-3 py-2 text-sm text-text outline-none focus:border-accent-cyan/50"
           />
         </div>
+      </div>
+      <div>
+        <label className="font-display text-xs tracking-wide text-muted uppercase">
+          Galerie — images supplémentaires (une URL par ligne)
+        </label>
+        <textarea
+          value={draft.imagesText}
+          onChange={(e) => handleChange('imagesText', e.target.value)}
+          rows={3}
+          placeholder={'/assets/projects/mon-projet-2.png\n/assets/projects/mon-projet-3.png'}
+          className="font-body mt-1 w-full resize-y rounded-md border border-white/12 bg-bg px-3 py-2 text-sm text-text outline-none focus:border-accent-cyan/50"
+        />
+        <p className="mt-1 text-xs text-muted/80">
+          La couverture s'affiche en premier, puis ces images. Les flèches apparaissent sur la
+          carte et dans le détail dès qu'il y a plusieurs images.
+        </p>
       </div>
       <label className="flex cursor-pointer items-center gap-2 text-sm text-text">
         <input

@@ -70,6 +70,14 @@ function validateProjectsData(parsed) {
         return { ok: false, error: `Projet ${i + 1} : « ${u} » doit être une chaîne ou null.` }
       }
     }
+    if (row.images != null) {
+      if (!Array.isArray(row.images)) {
+        return { ok: false, error: `Projet ${i + 1} : « images » doit être un tableau ou absent.` }
+      }
+      if (row.images.some((img) => typeof img !== 'string')) {
+        return { ok: false, error: `Projet ${i + 1} : « images » ne doit contenir que des chaînes.` }
+      }
+    }
   }
   return { ok: true, data: parsed }
 }

@@ -2,8 +2,76 @@ import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { motion as Motion } from 'framer-motion'
 import { useRepoProjects } from '../../hooks/useKeywords'
+import { projectImages } from '../../lib/projectImages'
 import { ProjectCard } from '../cards/ProjectCard'
 import { Modal } from '../ui/Modal'
+
+function ProjectGallery({ project }) {
+  const images = projectImages(project)
+  const [active, setActive] = useState(0)
+
+  if (images.length === 0) return null
+
+  const safeActive = Math.min(active, images.length - 1)
+  const hasMultiple = images.length > 1
+  const step = (delta) => setActive((i) => (i + delta + images.length) % images.length)
+
+  return (
+    <div className="group relative overflow-hidden rounded-md border border-white/10">
+      <Motion.img
+        key={images[safeActive]}
+        src={images[safeActive]}
+        alt=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.25 }}
+        className="h-full w-full object-cover"
+      />
+
+      {hasMultiple ? (
+        <>
+          <Motion.button
+            type="button"
+            onClick={() => step(-1)}
+            aria-label="Image précédente"
+            whileTap={{ scale: 0.9 }}
+            className="absolute top-1/2 left-2 flex size-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-bg/70 text-text backdrop-blur-sm transition-opacity hover:border-accent-cyan/40"
+          >
+            <span aria-hidden className="text-base leading-none">‹</span>
+          </Motion.button>
+          <Motion.button
+            type="button"
+            onClick={() => step(1)}
+            aria-label="Image suivante"
+            whileTap={{ scale: 0.9 }}
+            className="absolute top-1/2 right-2 flex size-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-bg/70 text-text backdrop-blur-sm transition-opacity hover:border-accent-cyan/40"
+          >
+            <span aria-hidden className="text-base leading-none">›</span>
+          </Motion.button>
+
+          <div className="absolute right-2 bottom-2 rounded bg-bg/70 px-2 py-0.5 font-display text-[11px] text-muted backdrop-blur-sm">
+            {safeActive + 1} / {images.length}
+          </div>
+
+          <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5">
+            {images.map((src, i) => (
+              <button
+                key={src}
+                type="button"
+                onClick={() => setActive(i)}
+                aria-label={`Voir l'image ${i + 1}`}
+                aria-current={i === safeActive}
+                className={`size-2 cursor-pointer rounded-full transition-colors ${
+                  i === safeActive ? 'bg-accent-cyan' : 'bg-white/40 hover:bg-white/70'
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      ) : null}
+    </div>
+  )
+}
 
 function youtubeEmbedUrl(url) {
   if (!url || typeof url !== 'string') return null
@@ -30,15 +98,7 @@ function ProjectModalContent({ project }) {
 
   return (
     <div className="space-y-6 text-sm leading-relaxed text-muted sm:text-base">
-      {project.thumbnail ? (
-        <div className="overflow-hidden rounded-md border border-white/10">
-          <img
-            src={project.thumbnail}
-            alt=""
-            className="h-full w-full object-cover"
-          />
-        </div>
-      ) : null}
+      <ProjectGallery project={project} />
 
       {project.methodology?.length ? (
         <div>
