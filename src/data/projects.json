@@ -162,5 +162,33 @@
     "videoUrl": null,
     "thumbnail": "/assets/projects/selection-projets-academiques.svg",
     "featured": false
+  },
+    {
+    "id": "open-tts",
+    "title": "Open-TTS",
+    "shortDescription": "Lecteur vocal 100 % locale sous Windows : sélectionner du texte, appuyer\nsur un raccourci, l'entendre. Moteurs TTS neuronaux, dont clonage de voix.",
+    "fullDescription": "Application Windows qui lit à voix haute n'importe quel texte sélectionné à l'écran, via un raccourci clavier global. Aucune donnée ne quitte la machine : les modèles tournent sur le GPU local, sans API ni compte.\n\nNé d'un usage quotidien — faire lire de longues sorties de terminal et de LLM — le projet est surtout devenu un terrain d'évaluation de modèles de synthèse vocale open-weights.\n\nBake-off de moteurs, mesuré et non subjectif :\nTrois modèles mis en concurrence sur le même texte français truffé de termes techniques anglais, avec protocole reproductible :\n- Kyutai TTS 1.6B (en_fr) — retenu : seul nativement bilingue, RTF 0,44, premier son en 0,9 s, 4,2 Go de VRAM\n- Kokoro-82M — conservé en option légère : RTF 0,05 et 1,2 Go de VRAM, mais francise les termes anglais\n- Chatterbox Multilingual — écarté : 18 s avant le premier son, RTF ~1,0, inutilisable sur un raccourci\nArbitrage par un juge ASR (Whisper large-v3-turbo) : chaque sortie est retranscrite et comparée au texte source (WER 0,17–0,21) pour objectiver la prononciation des termes techniques, complété par une écoute A/B.\n\nInférence en streaming :\nGénération frame par frame (80 ms) décodée par le codec neuronal Mimi et poussée directement dans le flux audio — la lecture démarre avant la fin de la synthèse et reste interruptible à tout moment.\n\nClonage de voix zero-shot :\nTroisième moteur basé sur Pocket TTS : le timbre est inféré à partir d'un prompt audio de 30 secondes, sans entraînement ni fine-tuning, et tourne intégralement sur CPU (GPU laissé libre). Un script de préparation normalise l'enregistrement (mono 24 kHz, rognage des silences, normalisation de niveau) avant de le rendre utilisable.\n\nPré-traitement du texte :\nModule de nettoyage pensé pour les sorties de terminal et de LLM : markdown retiré, blocs de code écartés, URLs neutralisées, extensions et chemins verbalisés (\"config point yaml\"), lignes coupées par le terminal recollées. Couvert par des tests unitaires exécutés en CI.\n\nGarantie hors-ligne vérifiable :\nUn script de contrôle force le mode offline et intercepte toute connexion sortante non-loopback au niveau socket : si la synthèse aboutit, la preuve est faite qu'aucune donnée n'est sortie.\n\nStack : Python · PyTorch (CUDA) · Kyutai TTS / moshi · Kokoro-82M · Pocket TTS · Hugging Face Hub · sounddevice · Tkinter · pystray · Pytest · GitHub Actions\n\nCode source : public sur GitHub.",
+    "tags": [
+      "Speech Synthesis",
+      "TTS",
+      "Voice Cloning",
+      "PyTorch",
+      "On-Device AI",
+      "Streaming Inference",
+      "Privacy by Design"
+    ],
+    "methodology": [
+      "Benchmark de modèles",
+      "Évaluation quantitative (WER, RTF, VRAM)",
+      "Inférence locale GPU",
+      "Zero-shot voice cloning",
+      "Tests unitaires & CI",
+      "Open Source packaging"
+    ],
+    "githubUrl": "https://github.com/PGing-s-eer/Open-TTS",
+    "demoUrl": null,
+    "videoUrl": null,
+    "thumbnail": "/assets/projects/open-tts.svg",
+    "featured": true
   }
 ]

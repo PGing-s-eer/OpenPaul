@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="ttsbg" cx="50%" cy="55%" r="80%">
+      <stop offset="0%" stop-color="#0a1612" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#03060a" stop-opacity="1"/>
+    </radialGradient>
+
+    <linearGradient id="ttsFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#5eead4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="ttsGlowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ttsGlowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#ttsbg)"/>
+
+  <!-- ARRIÈRE-PLAN : code en filigrane -->
+  <g opacity="0.06" font-family="'Courier New', monospace" font-size="9" fill="#5eead4">
+    <text x="40" y="120">hotkey: ctrl+alt+s → clipboard.selection</text>
+    <text x="40" y="138">clean: strip_markdown · drop_code_blocks · verbalize_paths</text>
+    <text x="40" y="156">engine: kyutai/tts-1.6b-en_fr · device: cuda:0</text>
+    <text x="40" y="174">stream: frame 80ms → mimi.decode → sounddevice</text>
+    <text x="530" y="386">rtf: 0.44 · vram: 4.2GB</text>
+    <text x="530" y="402">first_sound: 0.9s</text>
+    <text x="530" y="418">wer: 0.19 · judge: whisper-v3</text>
+  </g>
+
+  <!-- COURBE DE FLUX PRINCIPALE -->
+  <path d="M 150 270 Q 260 270, 340 270 T 650 270"
+        stroke="url(#ttsFlow)" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M 150 270 Q 260 270, 340 270 T 650 270"
+        stroke="#5eead4" stroke-width="1" fill="none" opacity="0.35"/>
+
+  <!-- Particules sur le flux -->
+  <circle cx="215" cy="270" r="2.5" fill="#5eead4" opacity="0.85"/>
+  <circle cx="265" cy="270" r="2" fill="#5eead4" opacity="0.6"/>
+  <circle cx="310" cy="270" r="3" fill="#5eead4" opacity="0.9"/>
+  <circle cx="500" cy="270" r="3" fill="#fb923c" opacity="0.9"/>
+  <circle cx="545" cy="270" r="2" fill="#fb923c" opacity="0.6"/>
+  <circle cx="595" cy="270" r="2.5" fill="#fb923c" opacity="0.85"/>
+
+  <!-- Frames de streaming (80 ms) entre moteur et sortie audio -->
+  <g opacity="0.5">
+    <rect x="474" y="264" width="7" height="12" rx="1" fill="#fb923c" opacity="0.7"/>
+    <rect x="518" y="264" width="7" height="12" rx="1" fill="#fb923c" opacity="0.55"/>
+    <rect x="562" y="264" width="7" height="12" rx="1" fill="#fb923c" opacity="0.4"/>
+  </g>
+
+  <!-- ===== NODE 1 : TEXTE SÉLECTIONNÉ (centre 140,270) ===== -->
+  <ellipse cx="140" cy="270" rx="78" ry="62" fill="url(#ttsGlowCyan)"/>
+  <rect x="95" y="235" width="90" height="70" rx="3" fill="#0d1814" stroke="#5eead4" stroke-width="1.5"/>
+  <line x1="106" y1="250" x2="174" y2="250" stroke="#5eead4" stroke-width="1" opacity="0.45"/>
+  <rect x="106" y="258" width="68" height="9" rx="1" fill="#5eead4" opacity="0.28"/>
+  <line x1="106" y1="262.5" x2="168" y2="262.5" stroke="#5eead4" stroke-width="1" opacity="0.9"/>
+  <rect x="106" y="271" width="68" height="9" rx="1" fill="#5eead4" opacity="0.28"/>
+  <line x1="106" y1="275.5" x2="160" y2="275.5" stroke="#5eead4" stroke-width="1" opacity="0.9"/>
+  <line x1="106" y1="288" x2="170" y2="288" stroke="#5eead4" stroke-width="1" opacity="0.45"/>
+  <line x1="106" y1="296" x2="150" y2="296" stroke="#5eead4" stroke-width="1" opacity="0.35"/>
+  <text x="140" y="325" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.7" letter-spacing="2">SELECTION</text>
+
+  <!-- Badge raccourci clavier, posé sur le flux -->
+  <rect x="234" y="228" width="78" height="22" rx="3" fill="#0d1814" stroke="#5eead4" stroke-width="1" opacity="0.9"/>
+  <text x="273" y="243" font-family="'Courier New', monospace" font-size="8" fill="#5eead4" text-anchor="middle" opacity="0.85" letter-spacing="1">CTRL+ALT+S</text>
+  <line x1="273" y1="250" x2="273" y2="262" stroke="#5eead4" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.45"/>
+
+  <!-- ===== NODE 2 : MOTEUR TTS LOCAL (centre 400,270) ===== -->
+  <ellipse cx="400" cy="270" rx="105" ry="92" fill="url(#ttsGlowOrange)"/>
+  <circle cx="400" cy="270" r="62" fill="#0d1814" stroke="#fb923c" stroke-width="2"/>
+  <circle cx="400" cy="270" r="69" fill="none" stroke="#fb923c" stroke-width="0.8" opacity="0.35"/>
+  <circle cx="400" cy="270" r="76" fill="none" stroke="#fb923c" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Spectre vocal symétrique -->
+  <g fill="#fb923c">
+    <rect x="368" y="258" width="4" height="14" rx="2" opacity="0.55"/>
+    <rect x="378" y="250" width="4" height="30" rx="2" opacity="0.75"/>
+    <rect x="388" y="242" width="4" height="46" rx="2" opacity="0.9"/>
+    <rect x="398" y="235" width="4" height="60" rx="2" opacity="1"/>
+    <rect x="408" y="242" width="4" height="46" rx="2" opacity="0.9"/>
+    <rect x="418" y="250" width="4" height="30" rx="2" opacity="0.75"/>
+    <rect x="428" y="258" width="4" height="14" rx="2" opacity="0.55"/>
+  </g>
+
+  <text x="400" y="308" font-family="'Courier New', monospace" font-size="7" fill="#fb923c" text-anchor="middle" opacity="0.7" letter-spacing="1">KYUTAI · en_fr</text>
+
+  <!-- Points cardinaux -->
+  <circle cx="400" cy="194" r="2" fill="#fb923c" opacity="0.6"/>
+  <circle cx="476" cy="270" r="2" fill="#fb923c" opacity="0.6"/>
+  <circle cx="400" cy="346" r="2" fill="#fb923c" opacity="0.6"/>
+  <circle cx="324" cy="270" r="2" fill="#fb923c" opacity="0.6"/>
+
+  <text x="400" y="368" font-family="'Courier New', monospace" font-size="10" fill="#fb923c" text-anchor="middle" opacity="0.95" letter-spacing="2" font-weight="700">LOCAL TTS ENGINE</text>
+  <text x="400" y="382" font-family="'Courier New', monospace" font-size="7" fill="#fb923c" text-anchor="middle" opacity="0.55" letter-spacing="2">streaming · 80 ms frames · interruptible</text>
+
+  <!-- ===== NODE 3 : SORTIE AUDIO (centre 660,270) ===== -->
+  <ellipse cx="660" cy="270" rx="78" ry="62" fill="url(#ttsGlowCyan)"/>
+  <rect x="615" y="235" width="90" height="70" rx="3" fill="#0d1814" stroke="#5eead4" stroke-width="1.5"/>
+  <g stroke="#5eead4" stroke-linecap="round">
+    <line x1="628" y1="264" x2="628" y2="276" stroke-width="2" opacity="0.45"/>
+    <line x1="637" y1="256" x2="637" y2="284" stroke-width="2" opacity="0.6"/>
+    <line x1="646" y1="248" x2="646" y2="292" stroke-width="2" opacity="0.8"/>
+    <line x1="655" y1="258" x2="655" y2="282" stroke-width="2" opacity="0.6"/>
+    <line x1="664" y1="244" x2="664" y2="296" stroke-width="2" opacity="0.95"/>
+    <line x1="673" y1="256" x2="673" y2="284" stroke-width="2" opacity="0.7"/>
+    <line x1="682" y1="262" x2="682" y2="278" stroke-width="2" opacity="0.5"/>
+    <line x1="691" y1="266" x2="691" y2="274" stroke-width="2" opacity="0.35"/>
+  </g>
+  <text x="660" y="325" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.7" letter-spacing="2">VOICE</text>
+
+  <!-- BADGE OFFLINE, centré au-dessus du moteur -->
+  <rect x="300" y="152" width="200" height="26" rx="3" fill="#0d1814" stroke="#5eead4" stroke-width="1" opacity="0.9"/>
+  <rect x="313" y="163" width="9" height="7" rx="1" fill="none" stroke="#5eead4" stroke-width="1"/>
+  <path d="M 314.5 163 v -3 a 3 3 0 0 1 6 0 v 3" fill="none" stroke="#5eead4" stroke-width="1"/>
+  <text x="334" y="170" font-family="'Courier New', monospace" font-size="8" fill="#5eead4" opacity="0.9" letter-spacing="2">100% ON-DEVICE · NO API</text>
+
+  <!-- TITLE -->
+  <text x="50" y="50" font-family="'Courier New', monospace" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="1">Open-TTS</text>
+  <text x="50" y="72" font-family="'Courier New', monospace" font-size="10" fill="#5eead4" letter-spacing="2" opacity="0.75">LOCAL NEURAL SPEECH · MODEL BENCH · VOICE CLONING</text>
+
+  <text x="750" y="50" font-family="'Courier New', monospace" font-size="9" fill="#fb923c" text-anchor="end" opacity="0.65" letter-spacing="2">SIDE PROJECT · OPEN SOURCE</text>
+  <text x="750" y="68" font-family="'Courier New', monospace" font-size="8" fill="#5eead4" text-anchor="end" opacity="0.5" letter-spacing="1">2026</text>
+
+  <!-- Footer -->
+  <line x1="50" y1="430" x2="750" y2="430" stroke="#5eead4" stroke-width="0.5" opacity="0.2"/>
+  <text x="400" y="455" font-family="'Courier New', monospace" font-size="9" fill="#5eead4" text-anchor="middle" opacity="0.55" letter-spacing="3">PYTHON · PYTORCH CUDA · KYUTAI TTS · KOKORO-82M · MIMI CODEC · WHISPER ASR</text>
+</svg>

@@ -791,5 +791,14 @@
     "dateAdded": "2025-05-09",
     "note": "Framework open-source pour le Gradient Boosting optimisé. Utilise une croissance Leaf-wise des arbres. Standard pour les compétitions Kaggle pour des données massives",
     "analogy": "Light = Lumière = Vitesse. GBM = Gradient Boosting Machine. -> LightGBM."
+  },
+  {
+  "id":"speculative-decoding",
+  "name":"Speculative Decoding",
+  "category":"Methodology",
+  "subcategory":"LLM Optimisation",
+  "dateAdded":"2026-08-19",
+  "note":"Technique d'accélération de génération de texte d'un LLM qui lance des prédictions parallèles pour valider plusieurs tokens en une passe unique. On valide le bloc entier si il est correct et recule uniquement sur l'erreur spécifique. Réduit considérablement la latence tout en préservant la qualité du texte généré. ",
+  "analogy":"Typing assisté : L'autocomplétion prédit la fin du mot sans te faire valider à chaque lettre, on annule juste si elle est fausse."
   }
   ]
